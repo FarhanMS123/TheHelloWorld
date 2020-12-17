@@ -35,11 +35,11 @@ body{
     margin-bottom: 10px;
 }
 
-.section{
-    margin: 10px;
-    padding: 10px;
+.box{
     width: fit-content;
     border: 1px solid blue;
+    margin: 10px;
+    padding: 10px;
 }
 
 .labels{
