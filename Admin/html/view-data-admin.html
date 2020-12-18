@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Participant Data</title>
+
+    <link rel="stylesheet" href="/css/style-admin.css">
+    <link rel="stylesheet" href="/css/style-data-admin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="dashboard">Dashboard</div>
+
+    <div class="navbarContainer">
+            <div class="linkPayment">Payment Confirmation</div>
+            <div class="linkParticipant" style="border-bottom: 3px solid red">Participant Data</div>
+    </div>
+
+    <div class="data">
+    <div class="groupTitle">RnD32</div>
+        <div class="dataContainer">
+            <div class="title">Leader</div>
+            <div class="dataBiodata">
+                <label for="leaderName">Name</label>
+                <input id="leaderName" name="leaderName" value="Maryanto" readonly>
+                <label for="leaderEmail">Email</label>
+                <input id="leaderEmail" name="leaderEmail" value="maryanto@bncc.net" readonly>
+                <label for="leaderWA">Whatsapp Number</label>
+                <input id="leaderWA" name="leaderWA" value="082333331111" readonly>
+                <label for="leaderLine">Line ID</label>
+                <input id="leaderLine" name="leaderLine" value="maryantoLine" readonly>
+                <label for="leaderGIT">GitLab ID</label>
+                <input id="leaderGIT" name="leaderGIT" value="maryantoGit" readonly>
+                <label for="leaderBirthP">Birth Place</label>
+                <input id="leaderBirthP" name="leaderBirthP" value="Tengah Laut" readonly>
+                <label for="leaderBirthD">Birth Date</label>
+                <input id="leaderBirthD" name="leaderBirthD" value="0001-11-11" readonly>
+            </div>
+            <div class="dataUpload">
+                <div class="container">
+                    <div>Your CV</div>
+                    <button>view CV</button>
+                </div>
+                <div class="container">
+                    <div>Your ID</div>
+                    <button>View ID</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dataContainer">
+            <div class="title">Member</div>
+            <div class="dataBiodata">
+                <label for="memberName">Name</label>
+                <input id="memberName" name="memberName" value="Benny" readonly>
+                <label for="memberEmail">Email</label>
+                <input id="memberEmail" name="memberEmail" value="benny@bncc.net" readonly>
+                <label for="memberWA">Whatsapp Number</label>
+                <input id="memberWA" name="memberWA" value="08736827198" readonly>
+                <label for="memberLine">Line ID</label>
+                <input id="memberLine" name="memberLine" value="bennyLine" readonly>
+                <label for="memberGIT">GitLab ID</label>
+                <input id="memberGIT" name="memberGIT" value="bennyGit" readonly>
+                <label for="memberBirthP">Birth Place</label>
+                <input id="memberBirthP" name="memberBirthP" value="rumah sakit" readonly>
+                <label for="memberBirthD">Birth Date</label>
+                <input id="memberBirthD" name="memberBirthD" value="0102-10-23" readonly>
+            </div>
+            <div class="dataUpload">
+                <div class="container">
+                    <div>Your CV</div>
+                    <button>view CV</button>
+                </div>
+                <div class="container">
+                    <div>Your ID</div>
+                    <button>View ID</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/javascript-data-admin.js"></script>
+</body>
+</html>

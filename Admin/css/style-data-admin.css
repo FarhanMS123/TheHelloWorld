@@ -1,0 +1,50 @@
+.groupTitle{
+    color: blue;
+    font-size: 40px;
+}
+
+.dataContainer{
+    margin: 10px 0;
+    border: 1px solid blue;
+    padding: 20px;
+    width: 400px;
+}
+
+.dataContainer .title{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.dataBiodata{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dataBiodata label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.dataBiodata input{
+    margin-bottom: 7px;
+}
+
+.dataUpload .container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.dataUpload .container div{
+    margin-right: 10px;
+}
+
+#submitButton{
+    color: red;
+    height: 40px;
+    width: 60px;
+    margin-top: 20px;
+    font-weight: bold;
+}
