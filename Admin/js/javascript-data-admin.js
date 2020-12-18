@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
     $(".linkPayment").click(function(){
-        window.location.href='/index-payment-admin.html';
+        window.location.href='/Admin/index-payment-admin.html';
     });
 
     $(".linkParticipant").click(function(){
-        window.location.href='/html/participant-data-admin.html';;
+        window.location.href='/Admin/html/participant-data-admin.html';;
     });
 
    
