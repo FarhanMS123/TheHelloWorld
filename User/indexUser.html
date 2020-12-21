@@ -9,51 +9,121 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <title>Dashboard</title>
   </head>
   <body>
-    <div>Dashboard</div>
+    <div class="title">Dashboard</div>
     <div class="navbar">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Payment</a></li>
-        <li><a href="">Timeline</a></li>
-        <li><a href="">Logout</a></li>
+        <li><a href="#" class="navbar-active" id="user-home">Home</a></li>
+        <li>
+          <a href="#" class="navbar-not-active" id="user-payment">Payment</a>
+        </li>
+        <li>
+          <a href="#" class="navbar-not-active" id="user-timeline">Timeline</a>
+        </li>
+        <li>
+          <a href="#" class="navbar-not-active" id="user-logout">Logout</a>
+        </li>
       </ul>
     </div>
-    <div class="home-container">
+    <div class="home-container" id="user-home-container">
       <div class="background-leader-data"></div>
       <div class="leader-data-wrapper">
-        <span>
-          <h2 class="leader-title">Leader</h2>
-        </span>
+        <header>Leader</header>
         <div class="data-form-container">
           <div class="data-leader-container">
-            <label>Name</label>
-            <div id="name-leader" class="data-leader-text">Alfian Zurfi</div>
+            <label for="leaderName">Name</label>
+            <input
+              id="leaderName"
+              name="leaderName"
+              value="Maryanto"
+              readonly
+            />
           </div>
           <div class="data-leader-container">
-            <label for="leaderName">Name</label>
-                <input id="leaderName" name="leaderName" value="Maryanto">
-                <label for="leaderEmail">Email</label>
-                <input id="leaderEmail" name="leaderEmail" value="maryanto@bncc.net">
-                <label for="leaderWA">Whatsapp Number</label>
-                <input id="leaderWA" name="leaderWA" value="082333331111">
-                <label for="leaderLine">Line ID</label>
-                <input id="leaderLine" name="leaderLine" value="maryantoLine">
-                <label for="leaderGIT">GitLab ID</label>
-                <input id="leaderGIT" name="leaderGIT" value="maryantoGit">
-                <label for="leaderBirthP">Birth Place</label>
-                <input id="leaderBirthP" name="leaderBirthP" value="Tengah Laut">
-                <label for="leaderBirthD">Birth Date</label>
-                <input id="leaderBirthD" name="leaderBirthD" value="0001-11-11">
-                <!-- copied and pasted astrid's input/label for form ( need to finish the structure) -->
+            <label for="leaderEmail">Email</label>
+            <input
+              id="leaderEmail"
+              name="leaderEmail"
+              value="maryanto@bncc.net"
+              readonly
+            />
+          </div>
+          <div class="data-leader-container">
+            <label for="leaderWA">Whatsapp Number</label>
+            <input
+              id="leaderWA"
+              name="leaderWA"
+              value="082333331111"
+              readonly
+            />
+          </div>
+          <div class="data-leader-container">
+            <label for="leaderLine">Line ID</label>
+            <input
+              id="leaderLine"
+              name="leaderLine"
+              value="maryantoLine"
+              readonly
+            />
+          </div>
+          <div class="data-leader-container">
+            <label for="leaderGIT">GitLab ID</label>
+            <input
+              id="leaderGIT"
+              name="leaderGIT"
+              value="maryantoGit"
+              readonly
+            />
+          </div>
+          <div class="data-leader-container">
+            <label for="leaderBirthP">Birth Place</label>
+            <input
+              id="leaderBirthP"
+              name="leaderBirthP"
+              value="Tengah Laut"
+              readonly
+            />
+          </div>
+          <div class="data-leader-container">
+            <label for="leaderBirthD">Birth Date</label>
+            <input
+              id="leaderBirthD"
+              name="leaderBirthD"
+              value="0001-11-11"
+              readonly
+            />
+          </div>
           <div class="view-data-wrapper">
-            <p>Your CV</p>
-            <p>Your ID Card</p>
+            <div class="data-leader-container-view">
+              <p>Your CV</p>
+              <button>View CV</button>
+            </div>
+            <div class="data-leader-container-view">
+              <p>Your ID Card</p>
+              <button>View ID Card</button>
+            </div>
           </div>
         </div>
       </div>
+      <div id="add-member">
+        Add member
+        <button id="add-member-button">Add Member</button>
+      </div>
+      <div class="contact-us-container">
+        <div class="contact-us-content">Contact us pls</div>
+      </div>
     </div>
+    <div class="not-active" id="user-payment-container">u are in payment</div>
+    <div class="not-active" id="user-timeline-container">
+      whoa look at thos timeline
+    </div>
+    <script src="scriptUser.js"></script>
   </body>
 </html>
