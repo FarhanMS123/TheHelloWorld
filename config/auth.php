@@ -46,6 +46,12 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'team' => [
+            // 'redirectTo' => 'team.dashboard',
+            'driver' => 'session',
+            'provider' => 'team',
+        ],
     ],
 
     /*
@@ -75,6 +81,11 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'team' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Team::class
+        ],
     ],
 
     /*

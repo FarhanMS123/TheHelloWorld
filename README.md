@@ -19,3 +19,7 @@ DB_PASSWORD=
 ```
 
 , or `CREATE` a database base your prefere.
+
+## References
+
+1. https://medium.com/@nasrulhazim/laravel-using-different-table-and-guard-for-login-bc426d067901
