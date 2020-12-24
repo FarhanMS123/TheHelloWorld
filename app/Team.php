@@ -16,7 +16,7 @@ class Team extends Model
     ];
 
     public function getAuthPassword(){
-        return $this->passhash;
+        return $this->password;
     }
 
     public function members(){
