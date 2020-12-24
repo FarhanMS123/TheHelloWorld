@@ -7,12 +7,12 @@ use Illuminate\Foundation\Auth\User as Model;
 
 class Team extends Model
 {
-    protected $fillable = ["name", "type", "passhash", "payment", "verified_at"];
+    protected $fillable = ["name", "type", "password", "payment", "verified_at"];
 
     protected $guarded = ['id'];
 
     protected $hidden = [
-        'passhash', 'remember_token',
+        'password', 'remember_token',
     ];
 
     public function getAuthPassword(){
