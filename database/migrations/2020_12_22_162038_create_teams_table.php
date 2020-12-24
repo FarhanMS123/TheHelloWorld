@@ -17,7 +17,7 @@ class CreateTeamsTable extends Migration
             $table->id();
             $table->string("name")->unique();
             $table->string("type"); // binusian | non-binusian | admin
-            $table->string("passhash");
+            $table->string("password");
             $table->string("payment")->nullable();
             $table->timestamp('verified_at')->nullable();
             $table->timestamps();

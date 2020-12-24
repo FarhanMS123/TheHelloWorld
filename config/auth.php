@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => 'team',
+        // 'passwords' => 'users',
     ],
 
     /*
@@ -84,7 +84,7 @@ return [
 
         'team' => [
             'driver' => 'eloquent',
-            'model' => App\Models\Team::class
+            'model' => App\Team::class
         ],
     ],
 
