@@ -7,6 +7,8 @@ use Illuminate\Foundation\Auth\User as Model;
 
 class Team extends Model
 {
+    protected $fillable = ["name", "type", "passhash", "payment", "verified_at"];
+
     protected $guarded = ['id'];
 
     protected $hidden = [
@@ -15,5 +17,9 @@ class Team extends Model
 
     public function getAuthPassword(){
         return $this->passhash;
+    }
+
+    public function members(){
+        return $this->hasMany(Member::class, "tid");
     }
 }

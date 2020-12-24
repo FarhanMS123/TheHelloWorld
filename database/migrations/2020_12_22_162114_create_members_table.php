@@ -15,7 +15,7 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("tid");
+            $table->foreignId("tid")->constrained("teams");
             $table->string("fullname");
             $table->string("type"); // leader | member
             $table->string("email")->unique();
