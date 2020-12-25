@@ -147,19 +147,19 @@ body{
 	z-index: 4;
 }
 #t-1:checked ~ .testimonials label[for="t-2"] {
-	transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
 	z-index: 3;
 }
 #t-1:checked ~ .testimonials label[for="t-3"] {
-	transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+	transform: translateX(400px) translateZ(-180px) rotateY(-25deg);
 	z-index: 2;
 }
 #t-1:checked ~ .testimonials label[for="t-4"] {
-	transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
+	transform: translateX(600px) translateZ(-270px) rotateY(-35deg);
 	z-index: 1;
 }
 #t-1:checked ~ .testimonials label[for="t-5"] {
-	transform: translateX(1200px) translateZ(-360px) rotateY(-45deg);
+	transform: translateX(800px) translateZ(-360px) rotateY(-45deg);
 }
 
 /* Second */
@@ -174,21 +174,21 @@ body{
 	transform: scale(1.5);
 }
 #t-2:checked ~ .testimonials label[for="t-1"] {
-	transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+	transform: translateX(-200px) translateZ(-90px) rotateY(15deg);
 }
 #t-2:checked ~ .testimonials label[for="t-2"] {
 	z-index: 3;
 }
 #t-2:checked ~ .testimonials label[for="t-3"] {
-	transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
 	z-index: 2;
 }
 #t-2:checked ~ .testimonials label[for="t-4"] {
-	transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+	transform: translateX(400px) translateZ(-180px) rotateY(-25deg);
 	z-index: 1;
 }
 #t-2:checked ~ .testimonials label[for="t-5"] {
-	transform: translateX(900px) translateZ(-270px) rotateY(-35deg);
+	transform: translateX(600px) translateZ(-270px) rotateY(-35deg);
 }
 
 /* Third */
@@ -203,20 +203,20 @@ body{
 	transform: scale(1.5);
 }
 #t-3:checked ~ .testimonials label[for="t-1"] {
-	transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+	transform: translateX(-400px) translateZ(-180px) rotateY(25deg);
 }
 #t-3:checked ~ .testimonials label[for="t-2"] {
-	transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+	transform: translateX(-200px) translateZ(-90px) rotateY(15deg);
 }
 #t-3:checked ~ .testimonials label[for="t-3"] {
-	z-index: 3;
+    z-index: 3;
 }
 #t-3:checked ~ .testimonials label[for="t-4"] {
-	transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
 	z-index: 2;
 }
 #t-3:checked ~ .testimonials label[for="t-5"] {
-	transform: translateX(600px) translateZ(-180px) rotateY(-25deg);
+	transform: translateX(400px) translateZ(-180px) rotateY(-25deg);
 }
 
 /* Fourth */
@@ -231,20 +231,20 @@ body{
 	transform: scale(1.5);
 }
 #t-4:checked ~ .testimonials label[for="t-1"] {
-	transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
+	transform: translateX(-600px) translateZ(-270px) rotateY(35deg);
 }
 #t-4:checked ~ .testimonials label[for="t-2"] {
-	transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+	transform: translateX(-400px) translateZ(-180px) rotateY(25deg);
 }
 #t-4:checked ~ .testimonials label[for="t-3"] {
-	transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+	transform: translateX(-200px) translateZ(-90px) rotateY(15deg);
 	z-index: 2;
 }
 #t-4:checked ~ .testimonials label[for="t-4"] {
 	z-index: 3;
 }
 #t-4:checked ~ .testimonials label[for="t-5"] {
-	transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
+	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
 }
 
 /* Fifth */
@@ -256,18 +256,18 @@ body{
 	background-color: #fff;
 }
 #t-5:checked ~ .testimonials label[for="t-1"] {
-	transform: translateX(-1200px) translateZ(-360px) rotateY(45deg);
+	transform: translateX(-800px) translateZ(-360px) rotateY(45deg);
 }
 #t-5:checked ~ .testimonials label[for="t-2"] {
-	transform: translateX(-900px) translateZ(-270px) rotateY(35deg);
+	transform: translateX(-600px) translateZ(-270px) rotateY(35deg);
 	z-index: 1;
 }
 #t-5:checked ~ .testimonials label[for="t-3"] {
-	transform: translateX(-600px) translateZ(-180px) rotateY(25deg);
+	transform: translateX(-400px) translateZ(-180px) rotateY(25deg);
 	z-index: 2;
 }
 #t-5:checked ~ .testimonials label[for="t-4"] {
-	transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+	transform: translateX(-200px) translateZ(-90px) rotateY(15deg);
 	z-index: 3;
 }
 #t-5:checked ~ .testimonials label[for="t-5"] {
