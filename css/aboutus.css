@@ -14,6 +14,7 @@ body {
   height: 900px;
   background: linear-gradient(180deg, #151531 0%, #421a92 100%);
   background-position: bottom;
+  position: relative;
 }
 
 .title-aboutus {
