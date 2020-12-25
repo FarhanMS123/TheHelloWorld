@@ -31,7 +31,3 @@ Route::group(['middleware' => ['auth:team']], function () {
 // Route::get('/', function () {
 //     return view('welcome_example');
 // });
-
-// Auth::routes();
-
-// Route::get('/home', 'HomeController@index')->name('home');
