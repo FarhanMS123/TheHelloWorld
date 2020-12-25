@@ -9,8 +9,14 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    <div class="card">
-        <div class="card-body m-5">
+    <div class="card m-5">
+        <div class="card-header clearfix">
+            <form class="float-right" action="{{route("logout")}}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+        </div>
+        <div class="card-body">
             <h4 class="card-title">Dashboard</h4>
         </div>
     </div>

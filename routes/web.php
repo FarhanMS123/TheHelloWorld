@@ -21,6 +21,7 @@ Route::post("/register", "AuthController@register")->name("register");
 
 Route::group(['middleware' => ['auth:team']], function () {
     Route::get("/dashboard", "TeamController@dashboard")->name("team_dashboard");
+    Route::post("/logout", "AuthController@logout")->name("logout");
 });
 
 // Route::group(['middleware' => ['auth', 'admin']], function () {

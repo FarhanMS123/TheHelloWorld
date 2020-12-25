@@ -29,24 +29,33 @@ class AuthController extends Controller
         return view("login")->withErrors([__("auth.failed")]);
     }
 
+    public function logout(Request $req){
+        Auth::guard('team')->logout();
+
+        return view("login");
+    }
+
     public function register(Request $req){
         $req->validate([
+            // ### TEAM #########
             "name" => ["required", "string", "min:3", "unique:App\Team,name"],
             "type" => ["required", "string", "regex:/^(binusian|non\-binusian)$/i"],
             "password" => ["required", "string", "min:8", "regex:/[A-Z]/",
-                           "regex:/[a-z]/", "regex:/\d/", "regex:/[^\w\d]/"],
+                            "regex:/[a-z]/", "regex:/\d/", "regex:/[^\w\d]/"],
 
-            // "fullname", "type", "email", "place_of_birth", "date_of_birth",
-            // "lineid", "whatsapp", "git_account", "identity", "cv"
-            // "fullname" => ["required", "string"],
+            // ### MEMBER #######
+            "fullname" => ["required", "string"],
             // "type" => ["required", "string", "regex:/^(leader|member)$/i"],
-            // "email" => ["required", "string", "unique:App\Member,email",
-            //             "regex:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/"],
-            // "place_of_birth" => ["required", "string"],
-            // "date_of_birth" => ["required", "date"],
-            // "lineid" => ["required", "string", "unique:App\Member,lineid"],
-            // "whatsapp" => ["required", "string", "min:9", "regex:/^\+?\d+$/",
-            //                "unique:App\Member,whatsapp"]
+            "email" => ["required", "string", "unique:App\Member,email",
+                        "regex:/^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$/"],
+            "place_of_birth" => ["required", "string"],
+            "date_of_birth" => ["required", "date"],
+            "lineid" => ["required", "string", "unique:App\Member,lineid"],
+            "whatsapp" => ["required", "string", "min:9", "regex:/^\+?\d+$/",
+                            "unique:App\Member,whatsapp"],
+            "git_account" => ["required", "string"],
+            "identity" => ["required", "file", "mimes:pdf,jpg,jpeg,png"],
+            "cv" => ["required", "file", "mimes:pdf,jpg,jpeg,png"],
         ]);
 
         $team = Team::create([
@@ -55,15 +64,22 @@ class AuthController extends Controller
             "password" => Hash::make($req->password)
         ]);
 
-        // $team->members()->create([
-        //     "fullname" => $req->fullname,
-        //     "type" => $req->type,
-        //     "email" => $req->email,
-        //     "place_of_birth" => $req->place_of_birth,
-        //     "date_of_birth" => $req->date_of_birth,
-        //     "lineid" => $req->lineid,
-        //     "whatsapp" => $req->whatsapp,
-        // ]);
+        $fn_identity = $req->file("identity")->store("id");
+        $fn_cv = $req->file("cv")->store("cv");
+
+        $team->members()->create([
+            "fullname" => $req->fullname,
+            // "type" => $req->type,
+            "type" => "leader",
+            "email" => $req->email,
+            "place_of_birth" => $req->place_of_birth,
+            "date_of_birth" => $req->date_of_birth,
+            "lineid" => $req->lineid,
+            "whatsapp" => $req->whatsapp,
+            "git_account" => $req->git_account,
+            "identity" => $fn_identity,
+            "cv" => $fn_cv
+        ]);
 
         $this->login($req);
     }
