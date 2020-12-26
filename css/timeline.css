@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+  body {
+    width: 100%;
+    min-width: 1080px;
+    font-family: "Poppins", sans-serif;
+  }
+  .section-timeline {
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(180deg, #151531 0%, #421A92 100%);
+  }
+  .title-timeline {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+    padding-top: 80px;
+    margin-bottom: 20px;
+    color: #39beff;
+  }
