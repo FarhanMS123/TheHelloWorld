@@ -43,17 +43,4 @@ $(document).ready(function(){
 
     });
 
-    // $("#email").on("input", function(){
-    //     var VAL = $this.val();
-
-    //     var email = new RegExp('/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/');
-
-    //     if (email.test(VAL)) {
-    //         $(".invalidEmail").hide();
-    //     }
-    //     else{
-    //        $(".invalidEmail").show();
-    //     }
-    // });
-
 });
