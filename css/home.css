@@ -55,7 +55,7 @@ body{
 }
 
 .home{
-    height: 730px;
+    height: 750px;
     background-image: linear-gradient(180deg, #421A92 0%, #151531 100%);
     width: 100%;
     background-position: bottom;
@@ -353,20 +353,20 @@ body{
     margin-top: -8px;
 }
 
-.ellipse1{
+.home .ellipse1{
     position: absolute;
     right: 0px;
     top: 450px;
     /* z-index: -1; */
 }
 
-.ellipse2{
+.home .ellipse2{
     position: absolute;
     top: 300px;
     /* z-index: -1; */
 }
 
-.ellipse3{
+.home .ellipse3{
     position: absolute;
     top: 80px;
     right: 0;
