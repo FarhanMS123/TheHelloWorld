@@ -32,7 +32,7 @@ body {
 .about-us-content {
     display: flex;
     flex-direction: row;
-    margin-left: 102px;
+    margin-left: 75px;
     margin-top: 50px;
     justify-content: center;
 }
@@ -55,7 +55,7 @@ body {
 .about-us-buttons {
   display: flex;
   flex-direction: row;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .about-us-button-text {
@@ -63,14 +63,14 @@ body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 36px;
   color: white;
 }
 
 #button-register {
-  height: 50px;
-  width: 140px;
+  height: 40px;
+  width: 120px;
   border-radius: 30px;
   border: 0px solid black;
   background: rgb(192, 81, 255);
@@ -85,8 +85,8 @@ body {
 }
 
 #button-download-guide-book {
-  width: 300px;
-  height: 50px;
+  width: 240px;
+  height: 40px;
   background-color: transparent;
   border-radius: 30px;
   border: 3px solid white;
