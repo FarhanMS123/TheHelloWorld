@@ -27,7 +27,7 @@ class SendEmailController extends Controller
             'text'=>$request->text
         );
         //Fill in email destination
-        Mail::to('//')->send(new Email($data));
+        Mail::to('///')->send(new Email($data));
         return back()->with('success', 'Thank you for contacting us!');
     }
 }
