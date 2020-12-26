@@ -29,14 +29,21 @@
             <div class="box">
                 <form action="">
                     <label for="name">Name</label>
+                    <div class="invalidName invalid">Invalid name. Minimum 3 character and letters only.</div>
                     <input type="text" id="name" name="name" placeholder="Type here...">
+                    
                     <label for="email">Email</label>
-                    <div class="invalidEmail invalid">Invalid email.</div>
-                    <input type="text" id="email" name="email" placeholder="Type here..." onfocusout="email()">
+                    <div class="invalidEmail invalid">Invalid email address. Valid entries include: someone@example.com</div>
+                    <input type="text" id="email" name="email" placeholder="Type here...">
+                    
                     <label for="subject">Subject</label>
+                    <div class="invalidSubject invalid">Invalid subject.</div>
                     <input type="text" id="subject" name="subject" placeholder="Type here...">
+                    
                     <label for="message">Message</label>
+                    <div class="invalidMessage invalid">Invalid message. Minimum 15 characters.</div>
                     <input type="text" id="message" name="message" placeholder="Type here...">
+                    
                     <button id="submit" onclick="submit()">Submit</button>
                 </form>
             </div>

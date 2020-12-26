@@ -91,5 +91,14 @@
 }
 
 .invalid{
-    color: red;
+    color: rgb(235, 51, 51);
+    font-size: 13px;
+}
+
+.invalid-active{
+    box-shadow:0px 0px 10px 0px rgb(240, 78, 78);
+}
+
+#name, #email, #subject, #message{
+    box-shadow: none;
 }
