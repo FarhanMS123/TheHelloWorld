@@ -47,8 +47,22 @@
     box-shadow: none;
     height: 40px;
     padding-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.contactus-left #message{
+    border-radius: 10px;
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+    height: 60px;
+    padding-left: 10px;
     margin-bottom: 20px;
     margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 15px;
+    font-size: 13px;
 }
 
 .contactus-left button{
@@ -102,3 +116,5 @@
 #name, #email, #subject, #message{
     box-shadow: none;
 }
+
+

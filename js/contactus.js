@@ -4,10 +4,17 @@ $(document).ready(function(){
     $(".invalidSubject").hide();
     $(".invalidMessage").hide();
 
+    $(".requireName").hide();
+    $(".requireEmail").hide();
+    $(".requireSubject").hide();
+    $(".requireMessage").hide();
+
+
     $("#email").change(function(){
         var VALemail = this.value;
         var validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
+        
         if (validEmail.test(VALemail)) {
             $(".invalidEmail").hide();
         }
@@ -41,6 +48,41 @@ $(document).ready(function(){
             $("#message").addClass("invalid-active");
         }
 
+    });
+
+    $("#submit").click(function(){
+        if($("#name").val()==""){
+            $(".requireName").show();
+        }
+        else{
+            $(".requireName").hide();
+        }
+        if($("#email").val()==""){
+            $(".requireEmail").show();
+        }
+        else{
+            $(".requireEmail").hide();
+        }
+        if($("#subject").val()==""){
+            $(".requireSubject").show();
+        }
+        else{
+            $(".requireSubject").hide();
+        }
+        if($("#message").val()==""){
+            $(".requireMessage").show();
+        }
+        else{
+            $(".requireMessage").hide();
+        }
+
+        if($("#name").val()!="" && $("#email").val()!="" && $("#subject").val()!="" && $("#message").val()!=""){
+            alert("Your message has been succesfully submitted.")
+            $("#name").val("");
+            $("#email").val("");
+            $("#subject").val("");
+            $("#message").val("");
+        }
     });
 
 });
