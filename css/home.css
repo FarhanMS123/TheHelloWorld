@@ -31,21 +31,20 @@ body{
 
 .navbar ul{
     list-style-type: none;
-    margin-right: 10px;
-    padding-right: 30px;
-    
+    padding: 18px 0;
 }
 
 .navbar li{
     float: left;
-    margin-left: 30px;
     color: white;
     font-size: 20px;
-    padding: 25px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .navbar li:hover{
     background-color: rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
 }
 
 .navbar .login{
@@ -55,7 +54,7 @@ body{
     border-radius: 25px;
     border: 3px solid transparent;
     padding: 5px 15px;
-    margin-top: 16px;
+    margin: 0 30px;
     /* gradient border: */
     background: 
     linear-gradient(to right,  #292957,  #292957), 
