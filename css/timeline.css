@@ -25,3 +25,50 @@
     margin-bottom: 20px;
     color: #39beff;
   }
+
+  .timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-content-icons {
+    width: 805px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .timeline-icons {
+    width: 70px;
+    padding: 10px;
+  }
+  .timeline-line {
+    width: 750px;
+    padding: 20px;
+  }
+  .timeline-content-text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+  }
+  .timeline-content-text {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 45px;
+    padding-right: 45px;
+
+  }
+  .timeline-subtitle {
+    background: -webkit-linear-gradient(#39BEFF, #404be3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .timeline-subtext {
+    color: white;
+  }
