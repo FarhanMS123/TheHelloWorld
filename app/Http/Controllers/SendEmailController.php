@@ -14,10 +14,10 @@ class SendEmailController extends Controller
 
     public function send(Request $request) {
         $request->validate([
-            'name'=>'required',
+            'name'=>'required|min:3',
             'email'=>'required|email',
             'subject'=>'required',
-            'text'=>'required'
+            'text'=>'required|min:15'
         ]);
 
         $data = array(
