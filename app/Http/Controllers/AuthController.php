@@ -12,6 +12,18 @@ use \App\Team;
 
 class AuthController extends Controller
 {
+    public function view_dashboard(Request $req){
+        if($team = $req->user()){
+            if(preg_match("/^(binusian|non\-binusian)$/i", $team->type)){
+                return view("dashboard");
+            }else if(preg_match("/^admin$/i", $team->type)){
+                //
+            }
+            return route("index");
+        }
+        return route("login");
+    }
+
     public function view_login(){
         return view("login");
     }
@@ -32,7 +44,7 @@ class AuthController extends Controller
     public function logout(Request $req){
         Auth::guard('team')->logout();
 
-        return view("login");
+        return route("home");
     }
 
     public function register(Request $req){
