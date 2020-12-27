@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 // ### PUBLIC ROUTES ###
+Route::get('/', 'IndexController@index')->name('home');
 Route::get('/sendemail', 'SendEmailController@index')->name('sendemail');
 Route::post('/sendemail/send', 'SendEmailController@send')->name('send');
 
@@ -35,7 +36,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 // ### TEAM ROUTE ######
 Route::group(['middleware' => ['auth', 'team']], function () {
-    Route::post("/logout", "AuthController@logout")->name("logout");
+    //
 });
 
 // ### ADMIN ROUTE ####
