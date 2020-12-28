@@ -12,9 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <!-- CSS links: -->
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/contactus.css">
 
 </head>
 <body>
@@ -32,68 +35,70 @@
     </ul>  
 </div>
 
+
+<!-- Register form -->
 <div class="register">
     <div class="register-container">
-        <div class="top">
-            <div class="line1"></div>
-            <div class="title">Register</div>
-            <div class="line2"></div>
-        </div>
-    
-        <div class="group subcontainer">
-            <div class="subtitle">Group</div>
-
-            <input type="text" id="group-name" name="group-name" placeholder="Group Name">
-            <input type="password" id="password" name="password" placeholder="Password">
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
-
-            <div class="radio-container">
-                <input type="radio" id="binusian" class="radio" name="type" value="binusian" checked="checked">
-                <label for="binusian">Binusian</label>
+        <form action="#" name="registration">
+            <div class="top">
+                <div class="line1"></div>
+                <div class="title">REGISTER</div>
+                <div class="line2"></div>
             </div>
-            <div class="radio-container">
-                <input type="radio" id="non-binusian" class="radio" name="type" value="non-binusian">
-                <label for="non-binusian">Non-Binusian</label>
-            </div>
-        </div>
-
-        <div class="leader subcontainer">
-            <div class="subtitle">Leader</div>
-            <input type="text" id="name" name="name" placeholder="Full Name">
-            <input type="email" id="email" name="email" placeholder="Email">
-            <input type="text" id="wa" name="wa" placeholder="Whatsapp Number">
-            <input type="text" id="line" name="line" placeholder="LINE ID">
-            <input type="text" id="github" name="github" placeholder="Github/Gitlab ID">
-            <input type="text" id="birthp" name="birthp" placeholder="Birth Place">
-            <input type="date" id="birthd" name="birthd">
-            
-            
-                <label for="id-card" id="id-card-label" class="id-card">
-                    <div> Upload ID Card</div>
-                    <img src="/Resources/register-icon.svg" alt="">
-                </label>
-                <input type="file" id="id-card" name="id-card" style="visibility:hidden;">
-                
-            
-            
-            
-                <label for="cv" id="cv-label" class="cv">
-                    <div>Upload CV</div>
-                    <img src="/Resources/register-icon.svg" alt="">
-                </label>
-                <input type="file" id="cv" name="cv" style="visibility:hidden;">
-                
-           
         
-        </div>
-    
-        <button id="submit">Submit</button>
+            <!-- Group form -->
+            <div class="group subcontainer">
+                <div class="subtitle">Group</div>
 
+                <input type="text" id="name" name="name" placeholder="Group Name">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password">
+
+                <div class="radio-parent">
+                    <div class="radio-container">
+                        <input type="radio" id="binusian" name="type" value="binusian">
+                        <label for="binusian">Binusian</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" id="non-binusian" name="type" value="non-binusian">
+                        <label for="non-binusian">Non-Binusian</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader form -->
+            <div class="leader subcontainer">
+                <div class="subtitle">Leader</div>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="Whatsapp Number">
+                <input type="text" id="lineid" name="lineid" placeholder="LINE ID">
+                <input type="text" id="git_account" name="git_account" placeholder="Github/Gitlab ID">
+                <input type="text" id="place_of_birth" name="place_of_birth" placeholder="Birth Place">
+                <input type="date" id="date_of_birth" name="date_of_birth">
+                
+                
+                    <label for="identity" id="id-card-label" class="id-card">
+                        <div> Upload ID Card (KTP/Binusian ID)</div>
+                        <img src="/Resources/register-icon.svg" alt="">
+                    </label>
+                    <input type="file" id="identity" name="identity">
+        
+                    <label for="cv" id="cv-label" class="cv">
+                        <div>Upload CV</div>
+                        <img src="/Resources/register-icon.svg" alt="">
+                    </label>
+                    <input type="file" id="cv" name="cv">
+                    
+            </div>
+        
+            <button id="submit" type="submit">Submit</button>
+        </form>
     </div>
 
 </div>  
 
-
+<script src="/js/register.js"></script>
     
 </body>
 </html>
