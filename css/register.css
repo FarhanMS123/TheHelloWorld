@@ -139,6 +139,7 @@ input[type=file]{
 
 ::-webkit-calendar-picker-indicator {
     filter: invert(1) opacity(60%);
+    cursor: pointer;
 }
 
 .upload::-webkit-file-upload-button{
@@ -150,4 +151,8 @@ div.error{
     font-size: 15px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+#submit{
+    cursor: pointer;
 }
