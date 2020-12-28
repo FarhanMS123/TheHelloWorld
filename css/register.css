@@ -94,10 +94,6 @@
     margin-top: 15px;
 }
 
-.register-container .radio-container{
-    /* margin-top: -30px; */
-}
-
 .register-container label{
     color: white;
     font-size: 20px;
@@ -155,4 +151,7 @@ div.error{
 
 #submit{
     cursor: pointer;
+    position: relative;
+    margin-left: 50%;
+    left: 30px;
 }
