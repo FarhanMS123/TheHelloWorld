@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <!-- CSS links: -->
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/aboutus.css">
@@ -82,9 +84,9 @@
     </div>
 
     <!-- findoutmore -->
-    <div class="findoutmore">
+    <a href="#aboutus"><div class="findoutmore">
         <div class="text">Find Out More</div>  
-    </div>
+    </div></a>
     <div class="arrow1"></div>
     <div class="arrow2"></div>
 
@@ -146,7 +148,9 @@
     <div class="ellipse2"><img src="/Resources/championprizes-ellipse2.png" alt="" height="350px"></div>
 
 </div>
+
 <!-- About Us Section -->
+<div id="aboutus"></div>
 <div class="section-aboutus">
     <div class="title-aboutus">About Hackathon 4.0</div>
     <div class="about-us-content">
@@ -313,28 +317,29 @@
     <div class="contactus-left">
         <div class="title">Contact Us</div>
         <div class="box">
-            <form action="javascript:void(0);">
+
+            <form action="#" name="contactus">
                 <label for="name">Name</label>
-                <div class="requireName invalid">Please fill out this field.</div>
-                <div class="invalidName invalid">Invalid name. Minimum 3 characters and letters only.</div>
+                <!-- <div class="requireName invalid">Please fill out this field.</div>
+                <div class="invalidName invalid">Invalid name. Minimum 3 characters and letters only.</div> -->
                 <input type="text" id="name" name="name" placeholder="Type here...">
                 
                 <label for="email">Email</label>
-                <div class="requireEmail invalid">Please fill out this field.</div>
-                <div class="invalidEmail invalid">Invalid email address. Valid entries include: someone@example.com</div>
+                <!-- <div class="requireEmail invalid">Please fill out this field.</div>
+                <div class="invalidEmail invalid">Invalid email address. Valid entries include: someone@example.com</div> -->
                 <input type="text" id="email" name="email" placeholder="Type here...">
                 
                 <label for="subject">Subject</label>
-                <div class="requireSubject invalid">Please fill out this field.</div>
-                <div class="invalidSubject invalid">Invalid subject.</div>
+                <!-- <div class="requireSubject invalid">Please fill out this field.</div>
+                <div class="invalidSubject invalid">Invalid subject.</div> -->
                 <input type="text" id="subject" name="subject" placeholder="Type here...">
                 
                 <label for="message">Message</label>
-                <div class="requireMessage invalid">Please fill out this field.</div>
-                <div class="invalidMessage invalid">Invalid message. Minimum 15 characters.</div>
+                <!-- <div class="requireMessage invalid">Please fill out this field.</div>
+                <div class="invalidMessage invalid">Invalid message. Minimum 15 characters.</div> -->
                 <textarea type="text" id="message" name="message" placeholder="Type here..."></textarea>
                 
-                <button id="submit">Submit</button>
+                <button id="submit"  type="submit">Submit</button>
             </form>
         </div>
     </div>

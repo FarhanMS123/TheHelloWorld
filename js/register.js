@@ -20,16 +20,16 @@ $(document).ready(function(){
  
         rules: {
             name: {
-            required: true,
-            minlength: 3,
-            letters: true,
-            remote: 'App\Team,name'
-            // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
+                required: true,
+                minlength: 3,
+                letters: true,
+                remote: 'App\Team,name'
+                // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             password: {
-            pass: true,
-            minlength: 8,
-            required: true,
+                pass: true,
+                minlength: 8,
+                required: true,
             },
             confirmpassword: {
                 equalTo: "#password"
