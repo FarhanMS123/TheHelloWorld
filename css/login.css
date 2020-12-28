@@ -26,16 +26,14 @@ body{
     width: 100%;
     z-index: 999999;
     min-width: 1080px;
+    
 }
 
 .navbar ul{
     list-style-type: none;
     padding: 18px 0;
-    margin-right: 30px;
 }
-.navbar-logo {
-    padding-left: 20px;
-}
+
 .navbar li{
     float: left;
     color: white;
@@ -63,6 +61,7 @@ body{
     linear-gradient(100deg,  #C051FF, #292957,#39BEFF); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
+
 }
 .section-login {
     height: 750px;
