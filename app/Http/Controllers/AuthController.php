@@ -8,20 +8,28 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
-use \App\Team;
+use App\Http\Controllers\TeamController;
+use App\Http\Controllers\AdminController;
+
+use App\Team;
 
 class AuthController extends Controller
 {
     public function view_dashboard(Request $req){
         if($team = $req->user()){
             if(preg_match("/^(binusian|non\-binusian)$/i", $team->type)){
-                return redirect()->action("TeamController@dashboard");
+                // return redirect()->action("TeamController@view_dashboard");
+                return redirect()->action([TeamController::class, 'view_dashboard']);
+                // $cteam = new TeamController();
+                // return $cteam->view_dashboard($req);
             }else if(preg_match("/^admin$/i", $team->type)){
                 return redirect()->action("AdminController@dashboard");
+                // $cadmin = new AdminController();
+                // return $cadmin->view_dashboard($req);
             }
-            return route("index");
+            return redirect()->route("index");
         }
-        return route("login");
+        return redirect()->route("login");
     }
 
     public function view_login(){
@@ -32,11 +40,19 @@ class AuthController extends Controller
     }
 
     public function login(Request $req){
+        $val = $req->validate([
+            "name" => ["required", "string"],
+            "password" => ["required", "string"],
+            "remember" => ["nullable", "boolean"]
+        ]);
+        // print_r($val);
+        // die();
         $auth = Auth::guard("team")->attempt([
-            "name" => $req->name,
-            "password" => $req->password]);
+            "name" => $val["name"],
+            "password" => $val["password"]],
+            isset($val["remember"]) && $val["remember"]);
         if($auth){
-            return redirect("/dashboard");
+            return redirect()->route("view_dashboard");
         }
         return view("login")->withErrors([__("auth.failed")]);
     }

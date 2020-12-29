@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Team;
 
 class TeamController extends Controller
 {
-    public function dashboard($id){
-        $team = Team::findOrFail($id);
+    public function view_dashboard(Request $req){
+        $team = Team::findOrFail($req->user()->id);
         return view("dashboard", compact('team'));
     }
 
