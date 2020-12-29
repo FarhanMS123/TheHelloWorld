@@ -19,20 +19,20 @@ class AuthController extends Controller
         if($team = $req->user()){
             if(preg_match("/^(binusian|non\-binusian)$/i", $team->type)){
                 // return redirect()->action("TeamController@view_dashboard");
-                // return (new TeamController())->view_dashboard($req);
+                return (new TeamController())->view_dashboard($req);
             }else if(preg_match("/^admin$/i", $team->type)){
                 // return redirect()->action("AdminController@dashboard");
-                // return (new AdminController())->view_dashboard($req);
+                return (new AdminController())->view_dashboard($req);
             }
-            return redirect()->route("index");
+            return redirect()->route("home");
         }
-        return redirect()->route("login");
+        return redirect()->route("view_login");
     }
 
     public function view_login(){
         return view("login");
     }
-    public function view_register(){
+    public function view_register(Request $req){
         return view("register");
     }
 
@@ -40,14 +40,14 @@ class AuthController extends Controller
         $val = $req->validate([
             "name" => ["required", "string"],
             "password" => ["required", "string"],
-            "remember" => ["nullable", "boolean"]
+            "remember" => ["nullable", "regex:/^(yes|on|1|true)$/i"]
         ]);
         // print_r($val);
         // die();
         $auth = Auth::guard("team")->attempt([
             "name" => $val["name"],
             "password" => $val["password"]],
-            isset($val["remember"]) && $val["remember"]);
+            isset($val["remember"]) && preg_match("/^(yes|on|1|true)$/i", $val["remember"]));
         if($auth){
             return redirect()->route("view_dashboard");
         }
@@ -57,7 +57,7 @@ class AuthController extends Controller
     public function logout(Request $req){
         Auth::guard('team')->logout();
 
-        return route("home");
+        return redirect()->route("home");
     }
 
     public function register(Request $req){
@@ -65,8 +65,8 @@ class AuthController extends Controller
             // ### TEAM #########
             "name" => ["required", "string", "min:3", "unique:App\Team,name"],
             "type" => ["required", "string", "regex:/^(binusian|non\-binusian)$/i"],
-            "password" => ["required", "string", "min:8", "regex:/[A-Z]/",
-                            "regex:/[a-z]/", "regex:/\d/", "regex:/[^\w\d]/"],
+            "password" => ["required", "string", "min:8", "regex:/[A-Z]/", "confirmed",
+                           "regex:/[a-z]/", "regex:/\d/", "regex:/[^\w\d]/"],
 
             // ### MEMBER #######
             "fullname" => ["required", "string"],
@@ -106,6 +106,6 @@ class AuthController extends Controller
             "cv" => $fn_cv
         ]);
 
-        $this->login($req);
+        return $this->login($req);
     }
 }

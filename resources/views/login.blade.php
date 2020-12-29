@@ -56,5 +56,8 @@
             </div>
         </div>
     </div>
+    @foreach ($errors->all() as $err)
+    <!-- {{$err}} -->
+    @endforeach
 </body>
 </html>

@@ -8,7 +8,8 @@ use App\Team;
 class TeamController extends Controller
 {
     public function view_dashboard(Request $req){
-        $team = Team::findOrFail($req->user()->id);
+        // $team = Team::findOrFail($req->user()->id);
+        $team = $req->user();
         return view("dashboard", compact('team'));
     }
 

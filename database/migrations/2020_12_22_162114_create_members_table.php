@@ -26,7 +26,6 @@ class CreateMembersTable extends Migration
             $table->string("git_account");
             $table->string("identity");
             $table->string("cv");
-            $table->rememberToken();
             $table->timestamps();
         });
     }

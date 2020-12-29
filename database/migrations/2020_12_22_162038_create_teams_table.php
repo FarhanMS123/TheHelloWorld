@@ -20,6 +20,7 @@ class CreateTeamsTable extends Migration
             $table->string("password");
             $table->string("payment")->nullable();
             $table->timestamp('verified_at')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
