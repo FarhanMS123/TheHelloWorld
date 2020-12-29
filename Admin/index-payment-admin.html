@@ -24,48 +24,119 @@
     
 <!-- Navbar -->
 <div class="navbar">
-    <div><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></div>
+    <div><a href="/index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li class="linkPayment">Payment Confirmation</li>
-        <li class="linkParticipant">Participant Data</li>
+        <a href="/Admin/index-payment-admin.html"><li class="linkPayment">Payment Confirmation</li></a>
+        <a href="/Admin/participant-data-admin.html"><li class="linkParticipant">Participant Data</li></a>
         <li class="login">Logout</liv>
     </ul>  
 </div>
 
+<div class="cd-popup box" role="alert">
+    <div class="popupTitle">Verify Payment</div>
+    <div class="cd-popup-container">
+        <p class="alertText"></p>
+        <ul class="cd-buttons button">
+            <button class="yes">Approve</button>
+            <button class="no">Reject</button>
+        </ul>
+    </div>
+</div>
+
 <!-- Admin Payment -->
-<div class="admin-payment">
+<div class="admin-payment" >
     <div class="top">
         <div class="line1"></div>
         <div class="title">Dashboard</div>
         <div class="line2"></div>
     </div>
 
+    <div class="overlay"></div>
     <div class="paymentContainer">
         <div class="title">Payment Confirmation</div>
         <div class="main-container">
             <div class="section">
                 <div class="box">
+                    <div class="groupName">RnD32</div>
+                    <!-- DEAR BACKEND: src img nya itu source buat bukti trf yass -trid-->
+                    <div id="dialog-window"></div>
+                    <div class="bukti"><img src="/Resources/contactus-icon1.png" alt=""></div>
                     <div class="content">
-                        <div class="groupName">RnD32</div>
-                        <div>Price   : Rp100.000</div>
-                        <div>Status  : Verified</div>
+                        <div class="left">
+                            <div>Price</div>
+                            <div>Status</div>
+                        </div>
+                        <div class="middle">
+                            <div>:</div>
+                            <div>:</div>
+                        </div>
+                        <div class="right">
+                            <!-- DEAR BACKEND: ini ya buat price sm status nya klo bingung tell me ya -trid -->
+                            <div>Rp.100.000</div>
+                            <div class="unverified status">Unverified</div>
+                            <div class="verified status">Verified</div>
+                            <div class="rejected status">Rejected</div>
+                        </div>
                     </div>
                     <div class="button">
-                        <button>Verify</button>
-                        <button>View</button>
+                        <button class="verify">Verify</button>
+                        <button class="view">View</button>
                     </div>
                 </div>
             </div>
             <div class="section">
                 <div class="box">
+                    <div class="groupName">RnD32</div>
+                    <!-- DEAR BACKEND: src img nya itu source buat bukti trf yass -->
+                    <div id="dialog-window"></div>
+                    <div class="bukti"><img src="/Resources/medpar-pic19.png" alt=""></div>
                     <div class="content">
-                        <div class="groupName">RnD32</div>
-                        <div>Price   : Rp100.000</div>
-                        <div>Status  : Verified</div>
+                        <div class="left">
+                            <div>Price</div>
+                            <div>Status</div>
+                        </div>
+                        <div class="middle">
+                            <div>:</div>
+                            <div>:</div>
+                        </div>
+                        <div class="right">
+                            <div>Rp.100.000</div>
+                            <div class="unverified status">Unverified</div>
+                            <div class="verified status">Verified</div>
+                            <div class="rejected status">Rejected</div>
+                        </div>
                     </div>
                     <div class="button">
-                        <button>Verify</button>
-                        <button>View</button>
+                        <button class="verify">Verify</button>
+                        <button class="view">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="box">
+                    <div class="groupName">RnD32</div>
+                    <!-- DEAR BACKEND: src img nya itu source buat bukti trf yass -->
+                    <div id="dialog-window"></div>
+                    <div class="bukti"><img src="/Resources/contactus-icon1.png" alt=""></div>
+                    <div class="content">
+                        <div class="left">
+                            <div>Price</div>
+                            <div>Status</div>
+                        </div>
+                        <div class="middle">
+                            <div>:</div>
+                            <div>:</div>
+                        </div>
+                        <div class="right">
+                            <div>Rp.100.000</div>
+                            <div class="unverified status">Unverified</div>
+                            <div class="verified status">Verified</div>
+                            <div class="rejected status">Rejected</div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <button class="verify">Verify</button>
+                        <button class="view">View</button>
                     </div>
                 </div>
             </div>

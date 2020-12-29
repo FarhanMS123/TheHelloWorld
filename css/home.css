@@ -21,7 +21,9 @@ select:-webkit-autofill:focus {
 html {
     scroll-behavior: smooth;
   }
-
+button{
+    outline: none;
+}
 
 body{
     width: 100%;
