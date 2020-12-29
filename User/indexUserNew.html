@@ -7,6 +7,45 @@
     <title>Dashboard</title>
 </head>
 <body>
-    
+    <div class="user-section">
+        <div class="user-dashboard-title">
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+            <h1 class="user-title">Dashboard</h1>
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
+        </div>
+        <div class="user-content">
+            <!-- Leader -->
+            <div class="user-content-leader">
+                <h3 class="user-content-subtitle">Leader</h3>
+                <div class="user-leader-data">
+                    <!-- Left Form -->
+                    <div class="user-leader-data-left">
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" value="John Doe" readonly>
+                        <input type="email" id="email" name="email" placeholder="Email" readonly>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Whatsapp Number" readonly>
+                        <input type="text" id="lineid" name="lineid" placeholder="LINE ID" readonly>
+                    </div>
+                    <!-- Right Form -->
+                    <div class="user-leader-data-right">
+                        <input type="text" id="git_account" name="git_account" placeholder="Github/Gitlab ID">
+                        <input type="text" id="place_of_birth" name="place_of_birth" placeholder="Birth Place">
+                        <input type="date" id="date_of_birth" name="date_of_birth">
+                        <!-- View File Container -->
+                        <div class="leader-file-container">
+                            <button class="idcard-view">View Id Card</button>
+                            <button class="cv-view">View CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Member -->
+            <div class="user-add-member"></div>
+            <!-- Contact Us -->
+            <div class="user-contactus">
+
+            </div>
+        </div>
+    </div>
+    <script src="/User/scriptUserNew.js"></script>
 </body>
 </html>
