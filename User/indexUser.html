@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styleUser.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/User/styleUserHome.css">
+    <link rel="stylesheet" href="/User/styleUserPayment.css">
+    <link rel="stylesheet" href="/User/styleUserTimeline.css">
     <title>Dashboard</title>
-  </head>
-  <body>
-    <div class="title">Dashboard</div>
-    <div class="navbar">
-      <ul>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+<div class="navbar">
+    <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
+    <ul class="list-container">
         <li><a href="#" class="navbar-active" id="user-home">Home</a></li>
         <li>
           <a href="#" class="navbar-not-active" id="user-payment">Payment</a>
@@ -27,103 +25,139 @@
         <li>
           <a href="#" class="navbar-not-active" id="user-timeline">Timeline</a>
         </li>
-        <li>
-          <a href="#" class="navbar-not-active" id="user-logout">Logout</a>
-        </li>
-      </ul>
-    </div>
-    <div class="home-container" id="user-home-container">
-      <div class="background-leader-data"></div>
-      <div class="leader-data-wrapper">
-        <header>Leader</header>
-        <div class="data-form-container">
-          <div class="data-leader-container">
-            <label for="leaderName">Name</label>
-            <input
-              id="leaderName"
-              name="leaderName"
-              value="Maryanto"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderEmail">Email</label>
-            <input
-              id="leaderEmail"
-              name="leaderEmail"
-              value="maryanto@bncc.net"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderWA">Whatsapp Number</label>
-            <input
-              id="leaderWA"
-              name="leaderWA"
-              value="082333331111"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderLine">Line ID</label>
-            <input
-              id="leaderLine"
-              name="leaderLine"
-              value="maryantoLine"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderGIT">GitLab ID</label>
-            <input
-              id="leaderGIT"
-              name="leaderGIT"
-              value="maryantoGit"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderBirthP">Birth Place</label>
-            <input
-              id="leaderBirthP"
-              name="leaderBirthP"
-              value="Tengah Laut"
-              readonly
-            />
-          </div>
-          <div class="data-leader-container">
-            <label for="leaderBirthD">Birth Date</label>
-            <input
-              id="leaderBirthD"
-              name="leaderBirthD"
-              value="0001-11-11"
-              readonly
-            />
-          </div>
-          <div class="view-data-wrapper">
-            <div class="data-leader-container-view">
-              <p>Your CV</p>
-              <button>View CV</button>
-            </div>
-            <div class="data-leader-container-view">
-              <p>Your ID Card</p>
-              <button>View ID Card</button>
-            </div>
-          </div>
+        <li class="login"><a href="/login.html">Logout</a></liv>
+    </ul>  
+</div>
+
+    <div class="user-home-section" id="user-home-container">
+        <!-- Dashboard Title -->
+        <div class="user-dashboard-title">
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+            <h1 class="user-title">Dashboard</h1>
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
         </div>
-      </div>
-      <div id="add-member">
-        Add member
-        <button id="add-member-button">Add Member</button>
-      </div>
-      <div class="contact-us-container">
-        <div class="contact-us-content">Contact us pls</div>
-      </div>
+        <div class="user-content">
+            <!-- Leader -->
+            <div class="user-content-leader">
+                <h3 class="user-content-subtitle">Leader</h3>
+                <div class="user-leader-data">
+                    <!-- Left Form -->
+                    <div class="user-leader-data-left">
+                        <label for="fullname" class="label">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" value="John Doe" readonly class="data-container">
+                        <label for="email" class="label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" value="johndoe@mail.com" readonly class="data-container">
+                        <label for="whatsapp" class="label">Whatsapp Number</label>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Whatsapp Number" value="081234567890" readonly class="data-container">
+                        <label for="lineid" class="label">LINE ID</label>
+                        <input type="text" id="lineid" name="lineid" placeholder="LINE ID" value="john.doe" readonly class="data-container">
+                    </div>
+                    <!-- Right Form -->
+                    <div class="user-leader-data-right">
+                        <label for="git_account" class="label">Github/Gitlab ID</label>
+                        <input type="text" id="git_account" name="git_account" placeholder="Github/Gitlab ID" value="JohnDoe" readonly class="data-container">
+                        <label for="place_of_birth" class="label">Birth Place</label>
+                        <input type="text" id="place_of_birth" name="place_of_birth" placeholder="Birth Place" value="Jakarta" readonly class="data-container">
+                        <label for="date_of_birth" class="label">Birth Date</label>
+                        <input type="date" id="date_of_birth" name="date_of_birth" value="2000-01-01" readonly class="data-container">
+                        <!-- View File Container -->
+                        <div class="view-file-container">
+                            <span class="button-border">ID Card<button id="leader-button-viewid"class="button-viewfile">View</button></span>
+                            <span class="button-border">CV<button id="leader-button-viewcv"class="button-viewfile">View</button></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Member -->
+            <div class="user-add-member">
+                <input type="button" id="addmember" class="add-member-button" value="+ ADD MEMBER">
+            </div>
+            <!-- Contact Us -->
+            <div class="user-contactus">
+                <div class="user-contactus-content">
+                    <span class="contactus-top">Jika ada informasi yang ingin diubah, silahkan hubungi Contact Person berikut:</span>
+                    <!-- lefright container -->
+                    <div class="contactus-leftright-container">
+                        <!-- Left -->
+                        <div class="user-contactus-left">
+                            <p style="color:#39BEFF;">John Doe</p>
+                            <div class="contactus-info">
+                               <img src="/Resources/user-whatsapplogo.svg" alt="Whatsapp Logo" class="contactus-logo"> 0812 3456 7890
+                               <br>
+                               <img src="/Resources/user-linelogo.svg" alt="Line Logo" class="contactus-logo"> john.doe
+                            </div>
+                        </div>   
+                       <!-- Right -->
+                        <div class="user-contactus-right">
+                            <p style="color:#39BEFF;">Jane Doe</p>
+                            <div class="contactus-info">
+                                <img src="/Resources/user-whatsapplogo.svg" alt="Whatsapp Logo" class="contactus-logo">0898 7654 3210
+                                <br>
+                                <img src="/Resources/user-linelogo.svg" alt="Line Logo" class="contactus-logo"> jane.doe
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="not-active" id="user-payment-container">u are in payment</div>
-    <div class="not-active" id="user-timeline-container">
-      whoa look at thos timeline
+    <!-- Payment -->
+    <div class="user-payment-section not-active" id="user-payment-container">
+          <!-- Dashboard Title -->
+        <div class="user-dashboard-title">
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+            <h1 class="user-title">Dashboard</h1>
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
+        </div>
+        <!-- Content -->
+        <div class="user-content">
+            <h3 class="user-subtitle">Payment</h3>
+        </div>
     </div>
-    <script src="scriptUser.js"></script>
-  </body>
+    <!-- Timeline -->
+    <div class="user-timeline-section not-active" id="user-timeline-container">
+           <!-- Dashboard Title -->
+           <div class="user-dashboard-title">
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+            <h1 class="user-title">Dashboard</h1>
+            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
+        </div>
+        <!-- Content -->
+        <div class="user-content">
+            <h3 class="user-subtitle">Timeline</h3>
+        </div>
+        <div class="section-timeline">
+            <div class="timeline-content">
+                <div class="timeline-content-icons">
+                    <img src="/Resources/timeline-pic1.svg" alt="Open Registration Icon" class="timeline-icons" id="timeline-pic1">
+                    <img src="/Resources/timeline-pic2.svg" alt="Close Registration Icon" class="timeline-icons" id="timeline-pic2">
+                    <img src="/Resources/timeline-pic3.svg" alt="Technical Meeting Icon" class="timeline-icons" id="timeline-pic3">
+                    <img src="/Resources/timeline-pic4.svg" alt="Competition Day Icon" class="timeline-icons" id="timeline-pic4">
+                </div>
+                <div class="timeline-content-line">
+                    <img src="/Resources/timeline-line.svg" alt="Line" class="timeline-line">
+                </div>
+                <div class="timeline-content-text-container">
+                    <div class="timeline-content-text">
+                        <h6 class="timeline-subtitle">Open Registration</h6>
+                        <h6 class="timeline-subtext"> 24 August 2021</h6>
+                    </div>
+                    <div class="timeline-content-text">
+                        <h6 class="timeline-subtitle">Close Registration</h6>
+                        <h6 class="timeline-subtext"> 3 October 2021</h6>
+                    </div>
+                    <div class="timeline-content-text">
+                        <h6 class="timeline-subtitle">Technical Meeting</h6>
+                        <h6 class="timeline-subtext"> 7 October 2021</h6>
+                    </div>
+                    <div class="timeline-content-text">
+                        <h6 class="timeline-subtitle">Competition Day</h6>
+                        <h6 class="timeline-subtext"> 10-12 August 2021</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/User/scriptUser.js"></script>
+</body>
 </html>
