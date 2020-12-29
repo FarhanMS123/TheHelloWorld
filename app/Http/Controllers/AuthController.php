@@ -19,13 +19,10 @@ class AuthController extends Controller
         if($team = $req->user()){
             if(preg_match("/^(binusian|non\-binusian)$/i", $team->type)){
                 // return redirect()->action("TeamController@view_dashboard");
-                return redirect()->action([TeamController::class, 'view_dashboard']);
-                // $cteam = new TeamController();
-                // return $cteam->view_dashboard($req);
+                // return (new TeamController())->view_dashboard($req);
             }else if(preg_match("/^admin$/i", $team->type)){
-                return redirect()->action("AdminController@dashboard");
-                // $cadmin = new AdminController();
-                // return $cadmin->view_dashboard($req);
+                // return redirect()->action("AdminController@dashboard");
+                // return (new AdminController())->view_dashboard($req);
             }
             return redirect()->route("index");
         }
