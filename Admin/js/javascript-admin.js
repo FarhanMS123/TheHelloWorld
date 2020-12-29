@@ -1,20 +1,4 @@
 
-// window.onload = function () {
-//     document.getElementById("view").onclick = function () {
-//         var overlay = document.getElementById("overlay");
-//         var popup = document.getElementById("popup");
-//         overlay.style.display = "block";
-//         popup.style.display = "block";
-//     };
-
-//     document.getElementById("closepopup").onclick = function () {
-//         var overlay = document.getElementById("overlay");
-//         var popup = document.getElementById("popup");
-//         overlay.style.display = "none";
-//         popup.style.display = "none";
-//     }
-// };
-
 $(document).ready(function(){
 
   
@@ -54,21 +38,7 @@ $(document).ready(function(){
             $(".overlay").trigger("click");
             thisVerify=null;
         })
-        
 
-
-
-
-        // var ok = confirm('Verify Payment for Nama Team ' + $(this).parents(".box").find(".groupName").val());
-        // if(ok){
-        //     $(this).parents(".box").find(".status").hide();
-        //     $(this).parents(".box").find(".verified").show();
-            
-        // }
-        // else{
-        //     $(this).parents(".box").find(".status").hide();
-        //     $(this).parents(".box").find(".rejected").show();
-        // }
 
     });
     
