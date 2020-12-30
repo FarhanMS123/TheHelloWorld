@@ -13,12 +13,12 @@ class TeamController extends Controller
         return view("dashboard", compact('team'));
     }
 
-    public function payment($id){
-        $team = Team::findOrFail($id);
+    public function payment(Request $req){
+        $team = $req->user();
         return view("payment", compact('team'));
     }
 
-    public function add(Request $req, $id){
+    public function add(Request $req){
         $req->validate([
             "fullname" => ["required", "string"],
             // "type" => ["required", "string", "regex:/^(leader|member)$/i"],
@@ -37,7 +37,7 @@ class TeamController extends Controller
         $fn_identity = $req->file("identity")->store("id");
         $fn_cv = $req->file("cv")->store("cv");
 
-        Team::findOrFail($id)->members()->create([
+        $req->user()->members()->create([
             "fullname" => $req->fullname,
             // "type" => $req->type,
             "type" => "member",
@@ -54,12 +54,12 @@ class TeamController extends Controller
         return back();
     }
 
-    public function pay(Request $req, $id) {
+    public function pay(Request $req) {
         $req->validate([
             'payment' => ["required", "file", "mimes:pdf,jpg,jpeg,png"]
         ]);
         $fn_payment = $req->file('payment')->store("pay");
-        Team::findorFail($id)->update([
+        $req->user()->update([
             'payment' => $fn_payment
         ]);
         return back();
