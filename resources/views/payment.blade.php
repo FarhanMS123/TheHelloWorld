@@ -10,7 +10,7 @@
     @if ($team->payment==NULL)
     <div class="container" >
         <div class="d-flex justify-content-center align-items-center" style="min-height: 83vh">
-        <form class="col-lg6" action="{{route('pay', $team->id)}}" method="POST" enctype="multipart/form-data">
+        <form class="col-lg6" action="{{route('pay')}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
         <div class="mb-3">
