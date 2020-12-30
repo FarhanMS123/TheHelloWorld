@@ -6,10 +6,13 @@
     color: inherit;
 }
 
-.admin-payment{
+.admin-payment, .admin-data, .admin-view-data, .admin-edit-data{
     padding-top: 100px;
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
     min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
 }
 
 .title{
@@ -97,7 +100,7 @@ button{
     background: linear-gradient(180deg, #39BEFF 0%, #00ABFF 100%);
 }
 
-.view, #viewData, .no{
+.view, #viewData, .no, .edit{
     border: 2px solid transparent;
     background:
         linear-gradient(to right,  #313166, #313166),
@@ -130,12 +133,11 @@ button{
 
 .popup{
     display: none;
-    justify-content: center;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index:100000;
+    z-index:10000;
 }
 
 .overlay{
@@ -147,7 +149,7 @@ button{
     height:100%;
     background:#000;
     opacity:0.5;
-    z-index:99999;
+    z-index:100;
 }
 
 .verified{
