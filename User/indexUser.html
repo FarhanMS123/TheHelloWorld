@@ -72,6 +72,55 @@
             <div class="user-add-member">
                 <input type="button" id="addmember" class="add-member-button" value="+ ADD MEMBER">
             </div>
+            <!-- Member -->
+            <form action="" name="addmemberform">
+            <div class="user-content-member" id="member-registration">
+                <h3 class="user-content-subtitle">Member</h3>
+
+                <div class="user-leader-data">
+                    <!-- Left Form -->
+                    <div class="user-leader-data-left">
+                        <label for="fullname" class="label">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Full Name" class="data-container" required>
+                        <label for="email" class="label">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" class="data-container" required>
+                        <label for="whatsapp" class="label">Whatsapp Number</label>
+                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Whatsapp Number" class="data-container" required>
+                        <label for="lineid" class="label">LINE ID</label>
+                        <input type="text" id="lineid" name="lineid" placeholder="LINE ID" class="data-container" required>
+                    </div>
+
+                    <!-- Right Form -->
+                    <div class="user-leader-data-right">
+                        <label for="git_account" class="label">Github/Gitlab ID</label>
+                        <input type="text" id="git_account" name="git_account" placeholder="Github/Gitlab ID"class="data-container" required>
+                        <label for="place_of_birth" class="label">Birth Place</label>
+                        <input type="text" id="place_of_birth" name="place_of_birth" placeholder="Birth Place"  class="data-container" required>
+                        <label for="date_of_birth" class="label">Birth Date</label>
+                        <input type="date" id="date_of_birth" name="date_of_birth" class="data-container" required>
+                        <!-- Input File Container -->
+                        <div class="view-file-container">
+                            <span class="button-border">
+                                <label for="identity" id="id-card-label" class="id-card">
+                                    <div> Upload ID Card (KTP/Binusian ID)</div>
+                                    <img src="/Resources/register-icon.svg" alt="">
+                                </label>
+                            </span>
+
+                            <span class="button-border">
+                                <label for="cv" id="cv-label" class="cv">
+                                    <div style="padding-right: 156px;">Upload CV</div>
+                                    <img src="/Resources/register-icon.svg" alt="">
+                                </label>
+                                <input type="file" id="cv" name="cv">
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+                <span class="button-container"><button id="submit" type="submit">SUBMIT</button></span>
+            </div>
+            </form>
             <!-- Contact Us -->
             <div class="user-contactus">
                 <div class="user-contactus-content">
@@ -158,6 +207,7 @@
             </div>
         </div>
     </div>
+    <!-- JS -->
     <script src="/User/scriptUser.js"></script>
 </body>
 </html>

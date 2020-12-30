@@ -4,6 +4,9 @@
     text-decoration: none;
     color: inherit;
 }
+/* *{
+    outline: 1px solid red;
+   } */
 textarea:focus, input:focus{
     outline: none;
 }
@@ -12,6 +15,13 @@ body{
     width: 100%;
     min-width: 1080px;
     font-family: 'Poppins', sans-serif;
+}
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 /* Navbar */
 .navbar{
@@ -75,15 +85,18 @@ body{
 /* User Section */
 .user-home-section {
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
-    height: 1200px;
+    height: fit-content;
+    background-repeat: no-repeat;
     width: 100%;
-    position: relative;
+    min-width: 1080px;
     padding-top: 120px;
+    padding-bottom: 100px;
 }
 .user-dashboard-title {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: auto;
 }
 .user-title {
     color: #39BEFF;
@@ -92,7 +105,7 @@ body{
     font-size: 48px;
 }
 .line {
-    width: 350px;
+    width: 225px;
 }
 .user-line2 {
     -webkit-transform: scaleX(-1);
@@ -162,6 +175,10 @@ body{
     font-size: 16px;
     color: white;
 }
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
 /* Label */
 .label {
     padding-top: 15px;
@@ -179,6 +196,7 @@ body{
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 16px;
+    font-size: 15px;
     /* Display */
     display: flex;
     flex-direction: row;
@@ -231,12 +249,87 @@ body{
     outline: none;
 }
 
+.add-member-button-active {
+    filter: brightness(70%);
+    /* Text */
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+    /* Button */
+    width: 750px;
+    height: 50px;
+    background: linear-gradient(180deg, #39BEFF 0%, #404BE3 100%);
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
 .add-member-button:hover {
     cursor: pointer;
     filter: brightness(70%);
     transition: 0.2s;
 }
+/* Member Registration */
+#member-registration {
+    display: none;
+}
+.user-content-member {
+    width: 750px;
+    height: 650px;
+    margin-top: 50px;
+    background: rgba(49, 49, 102, 0.9);
+    box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    margin-bottom: 35px;
+}
+/* Upload File */
+input[type=file]{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: transparent;
+    
+}
+.upload::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.cv, .id-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
 
+.cv:hover, .id-card:hover{
+    cursor: pointer;
+}
+/* Submit Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+#submit{
+    outline: none;
+    background-image: linear-gradient(180deg, #39BEFF 0%, #00ABFF 100%);
+    border: none;
+    border-radius: 50px;
+    width: 250px;
+    height: 50px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+#submit:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: 0.2s;
+}
 /* Contact Us */
 .user-contactus-content {
     margin: 15px;
@@ -287,4 +380,11 @@ body{
     display: flex;
     flex-direction: column;
     margin-right: 25px;
+}
+
+div.error{
+    color: rgb(233, 49, 49);
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
 }

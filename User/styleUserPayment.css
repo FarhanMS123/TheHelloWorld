@@ -1,9 +1,11 @@
 .user-payment-section {
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
-    height: 1200px;
+    height: fit-content;
+    background-repeat: no-repeat;
     width: 100%;
-    position: relative;
+    min-width: 1080px;
     padding-top: 120px;
+    padding-bottom: 100px;
 }
 .user-subtitle {
     font-size: 36px;
