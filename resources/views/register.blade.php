@@ -52,12 +52,12 @@
                 <div class="subtitle">Group</div>
 
                 <input type="text" id="name" name="name" placeholder="Group Name"@error('name')
-                 class="error" aria-describedby="name-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="name-error" aria-invalid="true" @enderror @if(isset($_POST["name"])) value="{{$_POST["name"]}}" @endif>
                 @error('name')
                 <div id="name-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="password" id="password" name="password" placeholder="Password"@error('password')
-                class="error" aria-describedby="password-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="password-error" aria-invalid="true"@enderror>
                 @error('password')
                 <div id="password-error" class="error">{{$message}}</div>
                 @enderror
@@ -88,37 +88,37 @@
             <div class="leader subcontainer">
                 <div class="subtitle">Leader</div>
                 <input type="text" id="fullname" name="fullname" placeholder="Full Name"@error('fullname')
-                class="error" aria-describedby="fullname-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="fullname-error" aria-invalid="true" @enderror @if(isset($_POST["fullname"])) value="{{$_POST["fullname"]}}" @endif>
                 @error('fullname')
                 <div id="fullname-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="email" id="email" name="email" placeholder="Email"@error('email')
-                class="error" aria-describedby="email-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="email-error" aria-invalid="true" @enderror @if(isset($_POST["email"])) value="{{$_POST["email"]}}" @endif>
                 @error('email')
                 <div id="email-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="text" id="whatsapp" name="whatsapp" placeholder="Whatsapp Number"@error('whatsapp')
-                class="error" aria-describedby="whatsapp-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="whatsapp-error" aria-invalid="true" @enderror @if(isset($_POST["whatsapp"])) value="{{$_POST["whatsapp"]}}" @endif>
                 @error('whatsapp')
                 <div id="whatsapp-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="text" id="lineid" name="lineid" placeholder="LINE ID"@error('lineid')
-                class="error" aria-describedby="lineid-error" aria-invalid="true" @enderror>
+                class="error" aria-describedby="lineid-error" aria-invalid="true" @enderror @if(isset($_POST["lineid"])) value="{{$_POST["lineid"]}}" @endif>
                 @error('lineid')
                 <div id="lineid-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="text" id="git_account" name="git_account" placeholder="Github/Gitlab ID"@error('git_account')
-                class="error" aria-describedby="git_account" aria-invalid="true" @enderror>
+                class="error" aria-describedby="git_account" aria-invalid="true" @enderror @if(isset($_POST["git_account"])) value="{{$_POST["git_account"]}}" @endif>
                 @error('git_account')
                 <div id="git_account-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="text" id="place_of_birth" name="place_of_birth" placeholder="Birth Place"@error('place_of_birth')
-                class="error" aria-describedby="place_of_birth" aria-invalid="true" @enderror>
+                class="error" aria-describedby="place_of_birth" aria-invalid="true" @enderror @if(isset($_POST["place_of_birth"])) value="{{$_POST["place_of_birth"]}}" @endif>
                 @error('place_of_birth')
                 <div id="place_of_birth-error" class="error">{{$message}}</div>
                 @enderror
                 <input type="date" id="date_of_birth" name="date_of_birth"@error('date_of_birth')
-                class="error" aria-describedby="date_of_birth" aria-invalid="true" @enderror>
+                class="error" aria-describedby="date_of_birth" aria-invalid="true" @enderror @if(isset($_POST["date_of_birth"])) value="{{$_POST["date_of_birth"]}}" @endif>
                 @error('date_of_birth')
                 <div id="date_of_birth-error" class="error">{{$message}}</div>
                 @enderror
@@ -155,6 +155,5 @@
 <!-- {{$err}} -->
 @endforeach
 <script src="{{asset("js/register.js")}}"></script>
-
 </body>
 </html>
