@@ -41,7 +41,7 @@ body{
     position:fixed;
     width: 100%;
     z-index: 999999;
-    min-width: 1080px;
+    min-width: 100%;
     
 }
 

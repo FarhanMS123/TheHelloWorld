@@ -16,7 +16,7 @@ $(document).ready(function(){
         });
 
 
-        $("form[name='registration']").validate({
+        $("form").validate({
  
         rules: {
             name: {

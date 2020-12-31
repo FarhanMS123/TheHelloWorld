@@ -1,50 +1,102 @@
-.groupTitle{
-    color: blue;
-    font-size: 40px;
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
 }
 
 .dataContainer{
-    margin: 10px 0;
-    border: 1px solid blue;
-    padding: 20px;
-    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
-.dataContainer .title{
-    color: black;
+.dataContainer .subtitle{
+    font-size: 35px;
+    color: white;
+    width: fit-content;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
     font-weight: bold;
-    font-size: 30px;
+}
+
+.dataContainer .section{
+    margin: 20px;
+    padding: 20px;
+    background: rgba(49, 49, 102, 0.9);
+    box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    margin-bottom: 50px;
 }
 
 .dataBiodata{
     margin: 20px 0;
     display: flex;
-    flex-direction: column;
-}
-
-.dataBiodata label{
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.dataBiodata input{
-    margin-bottom: 7px;
-}
-
-.dataUpload .container{
-    display: flex;
     flex-direction: row;
-    margin-bottom: 5px;
+    
 }
 
-.dataUpload .container div{
-    margin-right: 10px;
+.dataBiodata .left, .dataBiodata .right{
+    padding: 0 20px;
+    width: 100%;
+    height: fit-content;
 }
 
-#submitButton{
-    color: red;
-    height: 40px;
-    width: 60px;
+.dataBiodata label:not(.id-card):not(.cv){
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    padding-left: 5px;
+    display:inline-block;
+}
+
+.dataBiodata input:not(#identity):not(#midentity):not(#cv):not(#mcv){
+    border: 1.5px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    margin-top: 5px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+}
+
+
+.dataUpload {
+    width: 100%;
+    overflow: hidden;
     margin-top: 20px;
+}
+
+.dataUpload label{
+    background-color: transparent;
+    display: flex;
+    margin-top: 15px;
+}
+
+.dataUpload button{
+    margin: auto 0;
+    width: fit-content;
+}
+
+#submitData{
+    background-image: linear-gradient(180deg, #39BEFF 0%, #00ABFF 100%);
+    border: none;
+    border-radius: 50px;
+    margin: 20px auto;
+    width: 640px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
 }
