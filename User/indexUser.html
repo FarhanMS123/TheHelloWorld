@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/User/styleUserHome.css">
     <link rel="stylesheet" href="/User/styleUserPayment.css">
     <link rel="stylesheet" href="/User/styleUserTimeline.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Dashboard</title>
     <!-- Jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -162,6 +164,127 @@
         <!-- Content -->
         <div class="user-content">
             <h3 class="user-subtitle">Payment</h3>
+            <div class="user-payment-container">
+                <h3 class="payment-subtitle">Payment Method Instructions</h3>
+                <div class="payment-content">
+                    <div class="payment-registration">
+                        <!-- Content -->
+                        <!-- Tutorial 1 -->
+                        <div class="tutorial-container">
+                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial1">
+                                <p> 1. Periode Registrasi</p>
+                                <input type="image" src="/Resources/user-arrow.svg" id="toggle1" class="arrow">
+                            </div>
+                            <div class="tutorial-content" id="toggle1-content">
+                                <p class="text-content">
+                                - Early Bird (24 Agustus 2021 hingga 15 September 2021): Rp 60.000
+                                <br>
+                                - General (16 September 2021 hingga 3 Oktober 2021)
+                                <br>
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp; - Binusian: Rp 80.000
+                                <br>
+                                &nbsp;&nbsp; 
+                                &nbsp;&nbsp; - Non-Binusian: Rp 100.000
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Tutorial 2 -->
+                        <div class="tutorial-container">
+                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial2">
+                                <p> 2. Pembayaran Biaya Pendaftaran</p>
+                                <input type="image" src="/Resources/user-arrow.svg" id="toggle2" class="arrow">
+                            </div>
+                            <div class="tutorial-content" id="toggle2-content">
+                                <p class="text-content">
+                                    Lakukan pembayaran biaya pendaftaran per tim ke nomor rekening berikut:
+                                    <br>
+                                    Nomor Rekening : 5271675071
+                                    <br>
+                                    Bank : BCA
+                                    <br>
+                                    Atas Nama : ANNISA VINIDYA LARASATI
+                                    <br>
+                                    <img src="/Resources/user-qrcode.svg" alt="Qr code" class="qrcode">
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Tutorial 3 -->
+                        <div class="tutorial-container">
+                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial3">
+                                <p> 3. Upload Bukti Pembayaran</p>
+                                <input type="image" src="/Resources/user-arrow.svg" id="toggle3" class="arrow">
+                            </div>
+                            <div class="tutorial-content" id="toggle3-content">
+                                <p class="text-content">
+                                    Peserta mengisi data tim dan mengunggah file dengan batas 
+                                    maksimum 5 mb dalam bentuk .JPG, .JPEG, .PNG, atau .PDF 
+                                    yang berisi berkas – berkas berikut:
+                                    <br>
+                                    &nbsp;&nbsp;
+                                    &nbsp;&nbsp; a. Identitas peserta, berupa Kartu Tanda Penduduk (KTP) atau kartu 
+                                    Pelajar bagi yang belum memiliki KTP, Binusian Card bagi Binusian, ataupun berkas lain yang dapat diverifikasi identitas sebagai warga negara yang sah
+                                    <br>
+                                    &nbsp;&nbsp;
+                                    &nbsp;&nbsp;b. Curriculum Vitae (CV)
+                                    <br>
+                                    &nbsp;&nbsp;
+                                    &nbsp;&nbsp;c. Bukti pembayaran
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Tutorial 4 -->
+                        <div class="tutorial-container">
+                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial4">
+                                <p> 4. Verifikasi Pembayaran</p>
+                                <input type="image" src="/Resources/user-arrow.svg" id="toggle4" class="arrow">
+                            </div>
+                            <div class="tutorial-content" id="toggle4-content">
+                                <p class="text-content">
+                                - Early Bird (24 Agustus 2021 hingga 15 September 2021): Rp 60.000
+                                <br>
+                                - General (16 September 2021 hingga 3 Oktober 2021)
+                                <br>
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp; - Binusian: Rp 80.000
+                                <br>
+                                &nbsp;&nbsp; 
+                                &nbsp;&nbsp; - Non-Binusian: Rp 100.000
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Earlybird Offer -->
+                        <div class="tutorial-container">
+                            <div class="tutorial-subtitle-notactive">
+                                <p>Early Bird Offer</p>
+                            </div>
+                            <div class="tutorial-content-earlybird">
+                                <p class="text-content">
+                                    Waktu yang terisa untuk Early Bird:
+                                    <br>
+                                    15 September 2021 23.59
+                                </p>
+                                <p class="text-content" id="earlybird"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Upload Payment -->
+            <form action="">
+            <div class="upload-payment-container">
+                <h3 class="upload-payment-subtitle">Upload Payment Receipt</h3>
+                <div class="upload-button-container">
+                    <!-- Submit -->
+                    <span class="bukti-submit"><button id="submit-bukti" type="submit">Submit</button></span>
+                    <!-- Upload File -->
+                        <label for="bukti" id="bukti-label" class="cv">
+                            <div class="bukti-upload">Upload File</div>
+                        </label>
+                        <input type="file" id="bukti" name="bukti" required>
+                </div>
+            </div>
+            </form>
         </div>
     </div>
     <!-- Timeline -->

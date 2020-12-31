@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
 .user-payment-section {
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
     height: fit-content;
@@ -8,6 +14,7 @@
     padding-bottom: 100px;
 }
 .user-subtitle {
+    font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
@@ -15,4 +22,140 @@
     text-align: center;
     color: white;
     margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.user-payment-container {
+    width: 750px;
+    height: fit-content;
+    background: rgba(49, 49, 102, 0.9);
+    box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.payment-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    color: #39BEFF;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+.payment-registration {
+    width: 680px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 32px;
+}
+.tutorial-container {
+    margin-bottom: 20px;
+}
+/* Animation Tutorial Subtitle */
+.tutorial-subtitle-notactive {
+    width: 570px;
+    height: 70px;
+    background: #404BE3;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.3s;
+}
+.tutorial-subtitle {
+    width: 570px;
+    height: 70px;
+    background: #404BE3;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.tutorial-content{
+    width: 600px;
+    height: fit-content;
+    background: rgba(21, 21, 49, 0.6);
+    border-radius: 0px 0px 16px 16px;
+    display: none;
+}
+.text-content {
+    padding: 15px;
+}
+.arrow {
+    width: 25px;
+}
+.qrcode {
+    position: relative;
+    top: 10px;
+    left: 150px;
+    padding-bottom: 15px;
+}
+.tutorial-content-earlybird {
+    width: 600px;
+    height: 100px;
+    background: rgba(21, 21, 49, 0.6);
+    border-radius: 0px 0px 16px 16px;
+}
+#earlybird {
+    position: relative;
+    bottom: 30px;
+}
+
+/* Upload Payment Container */
+.upload-payment-container {
+    margin-top: 35px;
+    width: 750px;
+    height: fit-content;
+    background: rgba(49, 49, 102, 0.9);
+    box-shadow: 0px 0px 24px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+}
+.upload-payment-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    color: #39BEFF;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+
+.upload-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+.bukti-upload {
+    color: white;
+    background: #313166 90%;
+    border-radius: 32px;
+    border: 3px solid #00ABFF;
+    width: 100px;
+    text-align: center;
+}
+#submit-bukti {
+    background-color: #00ABFF;
+    border: none;
+    border-radius: 32px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: 600;
+    width: 100px;
+    height: 25px;
 }
