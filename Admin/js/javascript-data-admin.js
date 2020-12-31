@@ -15,6 +15,10 @@ $(document).ready(function(){
         $("img").removeClass("popup");
         $(".overlay").css("display", "none");
     });
+    
+    $(".delete").click(function(){
+        $(this).parents(".section").remove();
+    });
 
     $("form").each(function() {
 

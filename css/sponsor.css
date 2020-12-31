@@ -1,0 +1,57 @@
+.sponsor{
+    width: 100%;
+    min-height: 700px;
+    background: linear-gradient(180deg, #421A92 0%, #151531 100%);
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.title-sponsor{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+    padding-top: 80px;
+    margin-bottom: 50px;
+    color: #39beff;
+}
+
+.sponsor .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+.sponsor .subtitle{
+    font-weight: 600;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.sponsor .images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sponsor .silver{
+    width: 500px;
+}
+
+.sponsor img{
+    margin: 10px;
+}
+
+.sponsor .ellipse{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+}
