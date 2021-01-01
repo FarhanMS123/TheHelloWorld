@@ -1,49 +1,3 @@
-/* Hide Show Navbar */
-$(document).ready(function () {
-  $("#user-home").click(function () {
-      /* Hide Show */
-      $("#user-home-container").show();
-      $("#user-payment-container").hide();
-      $("#user-timeline-container").hide();
-      $("#user-home").removeClass("navbar-not-active").addClass("navbar-active");
-      $("#user-payment")
-        .removeClass("navbar-active")
-        .addClass("navbar-not-active");
-      $("#user-timeline")
-        .removeClass("navbar-active")
-        .addClass("navbar-not-active");
-    });
-  });
-  $(document).ready(function () {
-    $("#user-payment").click(function () {
-      /* Hide Show */
-      $("#user-home-container").hide();
-      $("#user-payment-container").show();
-      $("#user-timeline-container").hide();
-      $("#user-home").removeClass("navbar-active").addClass("navbar-not-active");
-      $("#user-payment")
-        .removeClass("navbar-not-active")
-        .addClass("navbar-active");
-      $("#user-timeline")
-        .removeClass("navbar-active")
-        .addClass("navbar-not-active");
-    });
-  });
-  $(document).ready(function () {
-    $("#user-timeline").click(function () {
-      /* Hide Show */
-      $("#user-home-container").hide();
-      $("#user-payment-container").hide();
-      $("#user-timeline-container").show();
-      $("#user-home").removeClass("navbar-active").addClass("navbar-not-active");
-      $("#user-payment")
-        .removeClass("navbar-active")
-        .addClass("navbar-not-active");
-      $("#user-timeline")
-        .removeClass("navbar-not-active")
-        .addClass("navbar-active");
-    });
-  });
   /* Add Member */
   $(document).ready(function(){
     $("#addmember").click(function(){
@@ -108,6 +62,19 @@ $(document).ready(function(){
       });
 });
 
+/* Are You Sure??? */
+function myFunction() {
+  var txt;
+  var r = confirm("Are you sure?");
+  if (r == true) {
+    $(document).ready(function () {
+      /* Submit Change to View */
+        $("#before-submit").hide();
+        $("#after-submit").show();
+    });
+  } else {
+  }
+}
 /* Countdown Timer */
 // Set the date we're counting down to
 var countDownDate = new Date("Sept 15, 2021 23:59:59").getTime();
@@ -139,7 +106,7 @@ var x = setInterval(function() {
 }, 1000);
 
 /* Member Registration Validation */
-/* $(document).ready(function(){
+$(document).ready(function(){
 
   $(function() {
 
@@ -282,5 +249,9 @@ var x = setInterval(function() {
    $("#identity").change(function(){
       $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''))
    });
+  
+   $("#bukti").change(function(){
+    $('#upload-text').text(this.value.replace(/C:\\fakepath\\/i, ''))
+  });
 
-}); */
+});

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- CSS -->
     <link rel="stylesheet" href="/User/styleUserHome.css">
     <link rel="stylesheet" href="/User/styleUserPayment.css">
@@ -14,18 +15,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
 </head>
 <body>
     <!-- Navbar -->
 <div class="navbar">
     <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li><a href="#" class="navbar-active" id="user-home">Home</a></li>
+        <li><a href="/User/indexUser.html" class="navbar-active" id="user-home">Home</a></li>
         <li>
-          <a href="#" class="navbar-not-active" id="user-payment">Payment</a>
+          <a href="/User/user-payment.html" class="navbar-not-active" id="user-payment">Payment</a>
         </li>
         <li>
-          <a href="#" class="navbar-not-active" id="user-timeline">Timeline</a>
+          <a href="/User/user-timeline.html" class="navbar-not-active" id="user-timeline">Timeline</a>
         </li>
         <li class="login"><a href="/login.html">Logout</a></liv>
     </ul>  
@@ -65,12 +68,78 @@
                         <input type="date" id="date_of_birth" name="date_of_birth" value="2000-01-01" readonly class="data-container">
                         <!-- View File Container -->
                         <div class="view-file-container">
-                            <span class="button-border">ID Card<button id="leader-button-viewid"class="button-viewfile">View</button></span>
-                            <span class="button-border">CV<button id="leader-button-viewcv"class="button-viewfile">View</button></span>
+                            <!-- This Id Card Leader -->
+                            <span class="button-border">ID Card
+                                <a href="#leader-idcard-img" id="leader-button-viewid" rel="modal:open" class="button-viewfile">View</a>
+                            </span>
+                            <!-- This CV Leader -->
+                            <span class="button-border">CV
+                                <a href="#leader-cv" id="leader-button-viewcv" rel="modal:open" class="button-viewfile">View</a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- This is for Button, change the href id to the member yang bersangkutan div -->
+           <!--  <div class="view-file-container">
+                <span class="button-border">ID Card
+                    <a href="#member1-idcard-img" id="leader-button-viewid" rel="modal:open" class="button-viewfile">View</a>
+                </span>
+                <span class="button-border">CV
+                    <a href="#member1-cv" id="leader-button-viewcv" rel="modal:open" class="button-viewfile">View</a>
+                </span>
+            </div> -->
+            
+            <!-- Image Div -->
+
+            <!-- Leader ID -->
+            <div id="leader-idcard-img" class="modal-background">
+                <embed src="/User/Popup/1_w4DxUy0PMoqeq25UXfyL0g@2x.jpeg" alt="Leader Image" class="image-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+            <!-- Leader CV -->
+            <div id="leader-cv" class="modal-background">
+                <embed src="/User/Popup/1_w4DxUy0PMoqeq25UXfyL0g@2x.jpeg" alt="Leader Image" class="pdf-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+
+              <!-- Member1 ID -->
+              <div id="member1-idcard-img" class="modal-background">
+                <embed src="/User/Popup/1_w4DxUy0PMoqeq25UXfyL0g@2x.jpeg" alt="Leader Image" class="image-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+            <!-- Member1 CV -->
+            <div id="member1-cv" class="modal-background">
+                <embed src="/User/Popup/Handbook BNCC.pdf" alt="Leader Image" class="pdf-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+
+              <!-- Member2 ID -->
+              <div id="member2-idcard-img" class="modal-background">
+                <embed src="/User/Popup/1_w4DxUy0PMoqeq25UXfyL0g@2x.jpeg" alt="Leader Image" class="image-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+            <!-- Member2 CV -->
+            <div id="member2-cv" class="modal-background">
+                <embed src="/User/Popup/Handbook BNCC.pdf" alt="Leader Image" class="pdf-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+
+              <!-- Member3 ID -->
+              <div id="member3-idcard-img" class="modal-background">
+                <embed src="/User/Popup/1_w4DxUy0PMoqeq25UXfyL0g@2x.jpeg" alt="Leader Image" class="image-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+            <!-- Member3 CV -->
+            <div id="member3-cv" class="modal-background">
+                <embed src="/User/Popup/Handbook BNCC.pdf" alt="Leader Image" class="pdf-modal">
+                <a href="#" rel="modal:close"></a>
+            </div>
+
+
+
+
             <!-- Add Member -->
             <div class="user-add-member">
                 <input type="button" id="addmember" class="add-member-button" value="+ ADD MEMBER">
@@ -113,7 +182,7 @@
 
                             <span class="button-border">
                                 <label for="cv" id="cv-label" class="cv">
-                                    <div style="padding-right: 156px;">Upload CV</div>
+                                    <div >Upload CV</div>
                                     <img src="/Resources/register-icon.svg" alt="">
                                 </label>
                                 <input type="file" id="cv" name="cv">
@@ -154,185 +223,9 @@
             </div>
         </div>
     </div>
-    <!-- Payment -->
-    <div class="user-payment-section not-active" id="user-payment-container">
-          <!-- Dashboard Title -->
-        <div class="user-dashboard-title">
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
-            <h1 class="user-title">Dashboard</h1>
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
-        </div>
-        <!-- Content -->
-        <div class="user-content">
-            <h3 class="user-subtitle">Payment</h3>
-            <div class="user-payment-container">
-                <h3 class="payment-subtitle">Payment Method Instructions</h3>
-                <div class="payment-content">
-                    <div class="payment-registration">
-                        <!-- Content -->
-                        <!-- Tutorial 1 -->
-                        <div class="tutorial-container">
-                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial1">
-                                <p> 1. Periode Registrasi</p>
-                                <input type="image" src="/Resources/user-arrow.svg" id="toggle1" class="arrow">
-                            </div>
-                            <div class="tutorial-content" id="toggle1-content">
-                                <p class="text-content">
-                                - Early Bird (24 Agustus 2021 hingga 15 September 2021): Rp 60.000
-                                <br>
-                                - General (16 September 2021 hingga 3 Oktober 2021)
-                                <br>
-                                &nbsp;&nbsp;
-                                &nbsp;&nbsp; - Binusian: Rp 80.000
-                                <br>
-                                &nbsp;&nbsp; 
-                                &nbsp;&nbsp; - Non-Binusian: Rp 100.000
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Tutorial 2 -->
-                        <div class="tutorial-container">
-                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial2">
-                                <p> 2. Pembayaran Biaya Pendaftaran</p>
-                                <input type="image" src="/Resources/user-arrow.svg" id="toggle2" class="arrow">
-                            </div>
-                            <div class="tutorial-content" id="toggle2-content">
-                                <p class="text-content">
-                                    Lakukan pembayaran biaya pendaftaran per tim ke nomor rekening berikut:
-                                    <br>
-                                    Nomor Rekening : 5271675071
-                                    <br>
-                                    Bank : BCA
-                                    <br>
-                                    Atas Nama : ANNISA VINIDYA LARASATI
-                                    <br>
-                                    <img src="/Resources/user-qrcode.svg" alt="Qr code" class="qrcode">
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Tutorial 3 -->
-                        <div class="tutorial-container">
-                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial3">
-                                <p> 3. Upload Bukti Pembayaran</p>
-                                <input type="image" src="/Resources/user-arrow.svg" id="toggle3" class="arrow">
-                            </div>
-                            <div class="tutorial-content" id="toggle3-content">
-                                <p class="text-content">
-                                    Peserta mengisi data tim dan mengunggah file dengan batas 
-                                    maksimum 5 mb dalam bentuk .JPG, .JPEG, .PNG, atau .PDF 
-                                    yang berisi berkas – berkas berikut:
-                                    <br>
-                                    &nbsp;&nbsp;
-                                    &nbsp;&nbsp; a. Identitas peserta, berupa Kartu Tanda Penduduk (KTP) atau kartu 
-                                    Pelajar bagi yang belum memiliki KTP, Binusian Card bagi Binusian, ataupun berkas lain yang dapat diverifikasi identitas sebagai warga negara yang sah
-                                    <br>
-                                    &nbsp;&nbsp;
-                                    &nbsp;&nbsp;b. Curriculum Vitae (CV)
-                                    <br>
-                                    &nbsp;&nbsp;
-                                    &nbsp;&nbsp;c. Bukti pembayaran
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Tutorial 4 -->
-                        <div class="tutorial-container">
-                            <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial4">
-                                <p> 4. Verifikasi Pembayaran</p>
-                                <input type="image" src="/Resources/user-arrow.svg" id="toggle4" class="arrow">
-                            </div>
-                            <div class="tutorial-content" id="toggle4-content">
-                                <p class="text-content">
-                                - Early Bird (24 Agustus 2021 hingga 15 September 2021): Rp 60.000
-                                <br>
-                                - General (16 September 2021 hingga 3 Oktober 2021)
-                                <br>
-                                &nbsp;&nbsp;
-                                &nbsp;&nbsp; - Binusian: Rp 80.000
-                                <br>
-                                &nbsp;&nbsp; 
-                                &nbsp;&nbsp; - Non-Binusian: Rp 100.000
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Earlybird Offer -->
-                        <div class="tutorial-container">
-                            <div class="tutorial-subtitle-notactive">
-                                <p>Early Bird Offer</p>
-                            </div>
-                            <div class="tutorial-content-earlybird">
-                                <p class="text-content">
-                                    Waktu yang terisa untuk Early Bird:
-                                    <br>
-                                    15 September 2021 23.59
-                                </p>
-                                <p class="text-content" id="earlybird"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Upload Payment -->
-            <form action="">
-            <div class="upload-payment-container">
-                <h3 class="upload-payment-subtitle">Upload Payment Receipt</h3>
-                <div class="upload-button-container">
-                    <!-- Submit -->
-                    <span class="bukti-submit"><button id="submit-bukti" type="submit">Submit</button></span>
-                    <!-- Upload File -->
-                        <label for="bukti" id="bukti-label" class="cv">
-                            <div class="bukti-upload">Upload File</div>
-                        </label>
-                        <input type="file" id="bukti" name="bukti" required>
-                </div>
-            </div>
-            </form>
-        </div>
-    </div>
-    <!-- Timeline -->
-    <div class="user-timeline-section not-active" id="user-timeline-container">
-           <!-- Dashboard Title -->
-           <div class="user-dashboard-title">
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
-            <h1 class="user-title">Dashboard</h1>
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
-        </div>
-        <!-- Content -->
-        <div class="user-content">
-            <h3 class="user-subtitle">Timeline</h3>
-        </div>
-        <div class="section-timeline">
-            <div class="timeline-content">
-                <div class="timeline-content-icons">
-                    <img src="/Resources/timeline-pic1.svg" alt="Open Registration Icon" class="timeline-icons" id="timeline-pic1">
-                    <img src="/Resources/timeline-pic2.svg" alt="Close Registration Icon" class="timeline-icons" id="timeline-pic2">
-                    <img src="/Resources/timeline-pic3.svg" alt="Technical Meeting Icon" class="timeline-icons" id="timeline-pic3">
-                    <img src="/Resources/timeline-pic4.svg" alt="Competition Day Icon" class="timeline-icons" id="timeline-pic4">
-                </div>
-                <div class="timeline-content-line">
-                    <img src="/Resources/timeline-line.svg" alt="Line" class="timeline-line">
-                </div>
-                <div class="timeline-content-text-container">
-                    <div class="timeline-content-text">
-                        <h6 class="timeline-subtitle">Open Registration</h6>
-                        <h6 class="timeline-subtext"> 24 August 2021</h6>
-                    </div>
-                    <div class="timeline-content-text">
-                        <h6 class="timeline-subtitle">Close Registration</h6>
-                        <h6 class="timeline-subtext"> 3 October 2021</h6>
-                    </div>
-                    <div class="timeline-content-text">
-                        <h6 class="timeline-subtitle">Technical Meeting</h6>
-                        <h6 class="timeline-subtext"> 7 October 2021</h6>
-                    </div>
-                    <div class="timeline-content-text">
-                        <h6 class="timeline-subtitle">Competition Day</h6>
-                        <h6 class="timeline-subtext"> 10-12 August 2021</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- JS -->
     <script src="/User/scriptUser.js"></script>
+    <!-- Modal CSS -->
+    <link rel="stylesheet" href="/User/styleUserModal.css">
 </body>
 </html>

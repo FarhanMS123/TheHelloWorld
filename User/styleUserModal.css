@@ -1,0 +1,39 @@
+/* Home */
+.modal {
+  max-width: fit-content;
+  background-color: rgb(20, 20, 48);
+}
+
+.image-modal {
+  padding: 10px;
+  width: 600px;
+  margin: auto;
+}
+.pdf-modal {
+  padding: 10px;
+  width: 600px;
+  height: 500px;
+  margin: auto;
+}
+.modal-background {
+  display: none;
+}
+
+/* Payment */
+#confirmation-popup {
+  display: none;
+}
+.popup-top {
+  height: 50px;
+  background: #404be3;
+  border-radius: 32px 32px 0px 0px;
+}
+.popup-text {
+  text-align: center;
+  color: white;
+}
+.popup-bottom {
+  height: fit-content;
+  background: #313166;
+  border-radius: 0px 0px 32px 32px;
+}

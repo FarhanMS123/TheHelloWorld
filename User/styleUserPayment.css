@@ -132,30 +132,127 @@
     text-align: center;
     color: #39BEFF;
     padding-top: 25px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
-
+/* Content */
+.upload-payment-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/* Payment-Left */
+.upload-payment-desc {
+    width: 200px;
+    height: 120px;
+    background: rgba(21, 21, 49, 0.6);
+    border-radius: 16px;
+}
+.price-subtitle {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500px;
+}
+.payment-details {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: center;
+}
+/* Payment Right */
+.file-details {
+    color: white;
+    text-align: left;
+    font-size: 21px;
+}
+.inline-block {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    color: white;
+}
+.payment-status {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 15px;
+}
+.filechosen {
+    background: transparent;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-left: 15px;
+}
+/* Buttons */
 .upload-button-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    padding-right: 50px;
+    
 }
 .bukti-upload {
     color: white;
     background: #313166 90%;
     border-radius: 32px;
-    border: 3px solid #00ABFF;
-    width: 100px;
+    border: 2px solid #00ABFF;
     text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    width: 140px;
+    height: 25px;
+    margin: 10px;
+    padding-top: 2px;
 }
-#submit-bukti {
+
+#submit-bukti, #view-bukti {
     background-color: #00ABFF;
     border: none;
     border-radius: 32px;
     font-family: 'Poppins', sans-serif;
     color: white;
     font-weight: 600;
-    width: 100px;
-    height: 25px;
+    font-size: 16px;
+    width: 140px;
+    height: 30px;
+    margin: 10px;
+    outline: none;
+    text-align: center;
+    position: relative;
+}
+
+.submit-text {
+    padding-top: 2px;
+}
+#submit-bukti:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+    transition: 0.2s;
+}
+
+.view-button {
+    display: none;
+}
+
+#onclick-dissapear {
+    display: flex;
+    flex-direction: row;
+}
+.invisible, #after-submit {
+    display: none;
 }
