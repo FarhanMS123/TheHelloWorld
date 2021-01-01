@@ -38,11 +38,18 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth', 'team']], function () {
     Route::get('/payment', 'TeamController@payment')->name('payment');
     Route::patch('/payment/pay', 'TeamController@pay')->name('pay');
-    // Route::get('/dashboard/{id}', "TeamController@dashboard")->name('dashboard');
     Route::post('/dashboard/add', 'TeamController@add')->name('add_member');
 });
 
 // ### ADMIN ROUTE ####
 Route::group(['middleware' => ['auth', 'admin']], function () {
-    //
+    Route::get("/dashboard/payment", "AdminController@index_payment")->name("index_payment");
+    Route::get("/dashboard/teams", "AdminController@index_teams")->name("index_teams");
+
+    Route::get("/dashboard/team/{id}", "AdminController@view_team")->name("view_team");
+    Route::get("/dashboard/team/e/{id}", "AdminController@view_edit_team")->name("view_edit_team");
+    Route::patch("/dashboard/team/{id}", "AdminController@edit_member_info")->name("edit_team");
+    Route::delete("/dashboard/team/{id}", "AdminController@delete_teams")->name("delete_team");
+
+    Route::patch("/dashboard/payment", "AdminController@verify_team")->name("verify");
 });
