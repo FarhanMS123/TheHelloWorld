@@ -63,18 +63,18 @@ $(document).ready(function(){
 });
 
 /* Are You Sure??? */
-function myFunction() {
-  var txt;
-  var r = confirm("Are you sure?");
-  if (r == true) {
-    $(document).ready(function () {
-      /* Submit Change to View */
-        $("#before-submit").hide();
-        $("#after-submit").show();
-    });
-  } else {
-  }
-}
+// function myFunction() {
+//   var txt;
+//   var r = confirm("Are you sure?");
+//   if (r == true) {
+//     $(document).ready(function () {
+//       /* Submit Change to View */
+//         $("#before-submit").hide();
+//         $("#after-submit").show();
+//     });
+//   } else {
+//   }
+// }
 /* Countdown Timer */
 // Set the date we're counting down to
 var countDownDate = new Date("Sept 15, 2021 23:59:59").getTime();
@@ -95,8 +95,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("earlybird").innerHTML = days + " hari " + hours + " jam "
-  + minutes + " menit " + seconds + " detik ";
+//   document.getElementById("earlybird").innerHTML = days + " hari " + hours + " jam "
+//   + minutes + " menit " + seconds + " detik ";
 
   // If the count down is over, write some text
   if (distance < 0) {
@@ -131,7 +131,7 @@ $(document).ready(function(){
               required: true,
               minlength: 3,
               letters: true,
-              remote: 'App\Team,name'
+//               remote: 'App\Team,name'
               // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
           },
           password: {
@@ -152,19 +152,19 @@ $(document).ready(function(){
           email: {
               required: true,
               email: true,
-              remote: 'App\Member,email'
+//               remote: 'App\Member,email'
               // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
           },
           whatsapp: {
               required: true,
               minlength: 9,
               telephone: true,
-              remote:'App\Member,whatsapp'
+//               remote:'App\Member,whatsapp'
               // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
           },
           lineid: {
               required: true,
-              remote:'App\Member,lineid'
+//               remote:'App\Member,lineid'
               // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
           },
           git_account: {
@@ -193,7 +193,7 @@ $(document).ready(function(){
               required: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
               minlength: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
               letters: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
-              remote: "*This group name is already taken."
+//               remote: "*This group name is already taken."
           } ,
           password: "*Please specify a valid password. Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character.",
           confirmpassword: "*Password dont match.",
@@ -202,17 +202,17 @@ $(document).ready(function(){
           email: {
               required: "*Please specify your email. For example: someone@example.com.",
               email:  "*Please specify your email. For example: someone@example.com.",
-              remote: "*This email is already taken."
+//               remote: "*This email is already taken."
           } ,
           whatsapp: {
               required: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
               minlength: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
               telephone: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
-              remote: "*This Whatsapp number is already taken."
+//               remote: "*This Whatsapp number is already taken."
           } ,
           lineid: {
               required:"*Please specify your LINE ID.",
-              remote: "*This LINE ID is already taken"
+//               remote: "*This LINE ID is already taken"
           } ,
           git_account: "*Please specify your Github/Gitlab ID. ",
           place_of_birth: "*Please specify your place of birth. Only letters and spaces are allowed.",
