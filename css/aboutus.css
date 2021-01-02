@@ -40,13 +40,13 @@ body {
   margin-top: 50px;
 }
 .about-us-text {
-  width: 450px;
+  width: 600px;
   height: fit-content;
   font-family: "Poppins", sans-serif;
-  font-size: 22px;
+  font-size: 34px;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 45px;
   letter-spacing: 0em;
   text-align: left;
   color: white;
@@ -63,14 +63,14 @@ body {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 36px;
   color: white;
 }
 
 #button-register {
-  height: 40px;
-  width: 120px;
+  height: 50px;
+  width: 150px;
   border-radius: 30px;
   border: 0px solid black;
   background: rgb(192, 81, 255);
@@ -85,8 +85,8 @@ body {
 }
 
 #button-download-guide-book {
-  width: 240px;
-  height: 40px;
+  width: 300px;
+  height: 50px;
   background-color: transparent;
   border-radius: 30px;
   border: 3px solid white;
@@ -94,6 +94,8 @@ body {
 }
 
 .about-us-pic {
+    width: 420px;
+    height: auto;
     filter: drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.25));
     padding-left: 25px; 
 }
