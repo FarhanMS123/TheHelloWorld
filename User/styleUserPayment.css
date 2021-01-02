@@ -4,6 +4,9 @@
     text-decoration: none;
     color: inherit;
 }
+html {
+    scroll-behavior: smooth;
+}
 .user-payment-section {
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
     height: fit-content;
