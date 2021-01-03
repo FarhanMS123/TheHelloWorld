@@ -23,9 +23,9 @@
 <div class="navbar">
     <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li><a href="/User/indexUser.html" class="navbar-not-active" id="user-home">Home</a></li>
+        <li><a href="{{route('dashboard')}}" class="navbar-not-active" id="user-home">Home</a></li>
         <li>
-          <a href="/User/user-payment.html" class="navbar-active" id="user-payment">Payment</a>
+          <a href="{{route('payment')}}" class="navbar-active" id="user-payment">Payment</a>
         </li>
         <li>
           <a href="/User/user-timeline.html" class="navbar-not-active" id="user-timeline">Timeline</a>
@@ -151,7 +151,7 @@
               </div>
           </div>
           <!-- Upload Payment -->
-          <form action="{{route('pay', $team->id)}}" method="POST" enctype="multipart/form-data">
+          <form action="{{route('pay')}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
           <div class="upload-payment-container">
