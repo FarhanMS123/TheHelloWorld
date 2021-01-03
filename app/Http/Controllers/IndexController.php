@@ -9,7 +9,7 @@ use App\Mail\Email;
 class IndexController extends Controller
 {
     public function index(){
-        //
+        return view('index');
     }
     
     public function send(Request $request) {
