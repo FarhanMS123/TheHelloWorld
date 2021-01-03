@@ -31,7 +31,7 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
+    <div><a href="{{route('home')}}"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
         <li>Home</li>
         <li>Champion Prizes</li>
