@@ -25,6 +25,9 @@ button{
     outline: none;
 }
 
+
+
+
 body{
     width: 100%;
     min-width: 1080px;
@@ -42,7 +45,6 @@ body{
     width: 100%;
     z-index: 999999;
     min-width: 100%;
-    
 }
 
 .navbar ul{
