@@ -37,6 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
 // ### TEAM ROUTE ######
 Route::group(['middleware' => ['auth', 'team']], function () {
     Route::get('/payment', 'TeamController@payment')->name('payment');
+    Route::get('/timeline', 'TeamController@timeline')->name('timeline');
     Route::patch('/payment/pay', 'TeamController@pay')->name('pay');
     Route::post('/dashboard/add', 'TeamController@add')->name('add_member');
 });
