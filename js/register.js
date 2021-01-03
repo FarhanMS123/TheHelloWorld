@@ -134,10 +134,13 @@ $(document).ready(function(){
      
     //to display uploaded file name
      $("#cv").change(function(){
-        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).preventDefault();
+        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''));
+        
      });
      $("#identity").change(function(){
-        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).off('wheel.disableScroll');
+        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''));
      });
 
 });

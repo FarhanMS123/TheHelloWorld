@@ -100,3 +100,7 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.id-card, .cv{
+    margin-bottom: -1em;
+}
