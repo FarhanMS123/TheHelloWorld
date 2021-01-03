@@ -38,7 +38,7 @@
         <li>About</li>
         <li>FAQ</li>
         <li>Timeline</li>
-        <li class="login"><a href="login.html">Login</a></liv>
+        <li class="login"><a href="{{route('login')}}">Login</a></liv>
     </ul>
 </div>
 
@@ -165,7 +165,7 @@
           </p>
           <div class="about-us-buttons">
               <button class="about-us-button-text" id="button-register">
-                  <a href="register.html"> Register</a>
+                  <a href="{{route('view_register')}}"> Register</a>
               </button>
               <button class="about-us-button-text" id="button-download-guide-book">
                   <a href=""> Download Guide Book</a>
