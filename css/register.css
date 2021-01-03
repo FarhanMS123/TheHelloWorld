@@ -118,11 +118,10 @@
 }
 
 input[type=file]{
-    position: absolute;
-    top: 0;
-    z-index: 1;
+    position: relative;
+    margin-top: -1.5em;
+    z-index: -1;
     color: transparent;
-    
 }
 
 .register-container #submit{

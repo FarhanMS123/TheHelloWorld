@@ -23,7 +23,6 @@ $(document).ready(function(){
                 required: true,
                 minlength: 3,
                 letters: true,
-                remote: 'App\Team,name'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             password: {
@@ -44,19 +43,16 @@ $(document).ready(function(){
             email: {
                 required: true,
                 email: true,
-                remote: 'App\Member,email'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             whatsapp: {
                 required: true,
                 minlength: 9,
                 telephone: true,
-                remote:'App\Member,whatsapp'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             lineid: {
                 required: true,
-                remote:'App\Member,lineid'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             git_account: {
@@ -138,10 +134,13 @@ $(document).ready(function(){
      
     //to display uploaded file name
      $("#cv").change(function(){
-        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).preventDefault();
+        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''));
+        
      });
      $("#identity").change(function(){
-        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).off('wheel.disableScroll');
+        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''));
      });
 
 });
