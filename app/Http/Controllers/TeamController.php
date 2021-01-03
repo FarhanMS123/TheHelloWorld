@@ -15,7 +15,24 @@ class TeamController extends Controller
 
     public function payment(Request $req){
         $team = $req->user();
-        return view("payment", compact('team'));
+        if(is_null($team->status))
+            $stats = "Not Verified";
+        elseif($team->status==1)
+            $stats = "Verified";
+        elseif($team->status==0)
+            $stats = "Rejected";
+
+        $tipe = "Non-binusian";
+        $price = "Rp 100.000";
+        if(preg_match("/^non-binusian$/i", $team->type)){
+            $tipe = "Non-binusian";
+            $price = "Rp 100.000";
+        }
+        elseif(preg_match("/^binusian$/i", $team->type)){
+            $tipe = "Binusian";
+            $price = "Rp 80.000";
+        }
+        return view("payment", compact('team','stats','tipe','price'));
     }
 
     public function add(Request $req){
