@@ -3,22 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \Illuminate\Support\Carbon;
 use App\Team;
 
 class TeamController extends Controller
 {
+
     public function view_dashboard(Request $req){
-        // $team = Team::findOrFail($req->user()->id);
         $team = $req->user();
         return view("dashboard", compact('team'));
     }
-    
+
     public function timeline(Request $req){
         $team = $req->user();
         return view("timeline", compact('team'));
     }
-    
+
     public function payment(Request $req){
+        // date_default_timezone_set("UTC");
+        // echo "<pre>";
+        // var_dump(date("Y-m-d H:i:s", time()));
+        // die("</pre>");
         $team = $req->user();
         if(is_null($team->status))
             $stats = "Not Verified";
@@ -27,17 +32,23 @@ class TeamController extends Controller
         elseif($team->status==0)
             $stats = "Rejected";
 
-        $tipe = "Non-binusian";
-        $price = "Rp 100.000";
-        if(preg_match("/^non-binusian$/i", $team->type)){
+        $tipe = null;
+        $price = null;
+        $date_str = date("d F Y H.i.s", config("hackathon.end_time_early_bid"));
+        // echo "<pre>";
+        // var_dump([time(), config("hackathon.price_binusian"), config("hackathon.end_time_early_bid")]);
+        // die("</pre>");
+        if(time() < config("hackathon.end_time_early_bid")){
+            $tipe = $team->type;
+            $price = "Rp. " . config("hackathon.price_early_bid");
+        }else if(preg_match("/^non-binusian$/i", $team->type)){
             $tipe = "Non-binusian";
-            $price = "Rp 100.000";
-        }
-        elseif(preg_match("/^binusian$/i", $team->type)){
+            $price = "Rp. " . config("hackathon.price_non_binusian");
+        }else if(preg_match("/^binusian$/i", $team->type)){
             $tipe = "Binusian";
-            $price = "Rp 80.000";
+            $price = "Rp. " . config("hackathon.price_binusian");
         }
-        return view("payment", compact('team','stats','tipe','price'));
+        return view("payment", compact('team','stats','tipe','price', 'date_str'));
     }
 
     public function add(Request $req){
@@ -77,13 +88,17 @@ class TeamController extends Controller
     }
 
     public function pay(Request $req) {
+        // date_default_timezone_set('UTC');
         $req->validate([
             'payment' => ["required", "file", "mimes:pdf,jpg,jpeg,png"]
         ]);
+
         $fn_payment = $req->file('payment')->store("pay");
         $req->user()->update([
-            'payment' => $fn_payment
+            'payment' => $fn_payment,
+            'paid_at' => Carbon::now() // date("Y-m-d H:i:s", time())
         ]);
+        // die();
         return back();
     }
 }

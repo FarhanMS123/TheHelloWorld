@@ -21,25 +21,30 @@
 <body>
     <!-- Navbar -->
 <div class="navbar">
-    <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
+    <div><a href="index.html"><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li><a href="{{route('dashboard')}}" class="navbar-active" id="user-home">Home</a></li>
+        <li><a href="{{route('view_dashboard')}}" class="navbar-active" id="user-home">Home</a></li>
         <li>
           <a href="{{route('payment')}}" class="navbar-not-active" id="user-payment">Payment</a>
         </li>
         <li>
           <a href="{{route('timeline')}}" class="navbar-not-active" id="user-timeline">Timeline</a>
         </li>
-        <li class="login"><a href="/login.html">Logout</a></liv>
+        <form action="{{route("logout")}}" method="post" style="display:inline-block">
+            @csrf
+            <button type="submit" style="border:none; background:none;">
+                <li class="login" type="submit">Logout</li>
+            </button>
+        </form>
     </ul>
 </div>
 
     <div class="user-home-section" id="user-home-container">
         <!-- Dashboard Title -->
         <div class="user-dashboard-title">
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+            <img src="{{asset("res/user-line.svg")}}" alt="Line 1" class="user-line1 line">
             <h1 class="user-title">Dashboard</h1>
-            <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
+            <img src="{{asset("res/user-line.svg")}}" alt="Line 1" class="user-line2 line">
         </div>
         <div class="user-content">
             <h3 class="user-subtitle">Home</h3>
@@ -191,7 +196,7 @@
                             <span class="button-border">
                                 <label for="cv" id="cv-label" class="cv">
                                     <div >Upload CV</div>
-                                    <img src="/Resources/register-icon.svg" alt="">
+                                    <img src="{{asset("res/register-icon.svg")}}" alt="">
                                 </label>
                                 <input type="file" id="cv" name="cv">
                             </span>
@@ -215,18 +220,18 @@
                         <div class="user-contactus-left">
                             <p style="color:#39BEFF;">John Doe</p>
                             <div class="contactus-info">
-                               <img src="/Resources/user-whatsapplogo.svg" alt="Whatsapp Logo" class="contactus-logo"> 0812 3456 7890
+                               <img src="{{asset("res/user-whatsapplogo.svg")}}" alt="Whatsapp Logo" class="contactus-logo"> 0812 3456 7890
                                <br>
-                               <img src="/Resources/user-linelogo.svg" alt="Line Logo" class="contactus-logo"> john.doe
+                               <img src="{{asset("res/user-linelogo.svg")}}" alt="Line Logo" class="contactus-logo"> john.doe
                             </div>
                         </div>
                        <!-- Right -->
                         <div class="user-contactus-right">
                             <p style="color:#39BEFF;">Jane Doe</p>
                             <div class="contactus-info">
-                                <img src="/Resources/user-whatsapplogo.svg" alt="Whatsapp Logo" class="contactus-logo">0898 7654 3210
+                                <img src="{{asset("res/user-whatsapplogo.svg")}}" alt="Whatsapp Logo" class="contactus-logo">0898 7654 3210
                                 <br>
-                                <img src="/Resources/user-linelogo.svg" alt="Line Logo" class="contactus-logo"> jane.doe
+                                <img src="{{asset("res/user-linelogo.svg")}}" alt="Line Logo" class="contactus-logo"> jane.doe
                              </div>
                         </div>
                     </div>

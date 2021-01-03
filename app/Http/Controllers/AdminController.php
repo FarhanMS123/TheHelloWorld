@@ -6,20 +6,39 @@ use Illuminate\Http\Request;
 use App\Team;
 use App\Member;
 use Illuminate\Support\Facades\Storage;
+use \Illuminate\Support\Carbon;
 
 class AdminController extends Controller
 {
     // ### PAYMENT #######
+    public function getPriceConfig($team){
+        if(time() < config("hackathon.end_time_early_bid")){
+            return config("hackathon.price_early_bid");
+        }else if(preg_match("/^non-binusian$/i", $team->type)){
+            return config("hackathon.price_non_binusian");
+        }else if(preg_match("/^binusian$/i", $team->type)){
+            return config("hackathon.price_binusian");
+        }
+    }
+
     public function index_payment(){
-        $teams = Team::all();
+        // $teams = Team::all();
+        $teams = Team::whereNotNull("payment")->get();
 
         return view("admin.index-payment-admin", compact("teams"));
     }
 
     public function verify_team(Request $req){
+        $req->validate([
+            "id" => ["required", "numeric", "min:0"],
+            "status" => ["required", "min:0", "max:1"]
+        ]);
+
         $team = Team::findOrFail($req->id);
+        $isValidating = $req->status;
         $team->update([
-            "verified_at" => ($team["verified_at"] == null ? date('Y-m-d H:i:s') : null)
+            "verified_at" => ($isValidating ? Carbon::now() : null),
+            "status" => ($isValidating ? 1 : 0)
         ]);
 
         return back();

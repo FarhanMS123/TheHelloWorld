@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Model;
 
 class Team extends Model
 {
-    protected $fillable = ["name", "type", "password", "payment", "verified_at", "status"];
+    protected $fillable = ["name", "type", "password", "payment", "verified_at", "status", "paid_at"];
 
     protected $guarded = ['id'];
 

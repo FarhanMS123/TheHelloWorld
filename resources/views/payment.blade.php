@@ -23,7 +23,7 @@
 <div class="navbar">
     <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li><a href="{{route('dashboard')}}" class="navbar-not-active" id="user-home">Home</a></li>
+        <li><a href="{{route('view_dashboard')}}" class="navbar-not-active" id="user-home">Home</a></li>
         <li>
           <a href="{{route('payment')}}" class="navbar-active" id="user-payment">Payment</a>
         </li>
@@ -142,7 +142,7 @@
                               <p class="text-content">
                                   Waktu yang terisa untuk Early Bird:
                                   <br>
-                                  15 September 2021 23.59
+                                  {{$date_str}}
                               </p>
                               <p class="text-content" id="earlybird"></p>
                           </div>

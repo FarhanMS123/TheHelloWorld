@@ -1,4 +1,14 @@
-<!DOCTYPE html>
+<?php
+function getPriceConfig($team){
+    if(time() < config("hackathon.end_time_early_bid")){
+        return config("hackathon.price_early_bid");
+    }else if(preg_match("/^non-binusian$/i", $team->type)){
+        return config("hackathon.price_non_binusian");
+    }else if(preg_match("/^binusian$/i", $team->type)){
+        return config("hackathon.price_binusian");
+    }
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +53,7 @@
         <p class="alertText"></p>
         <form action="{{route("verify")}}" method="POST" enctype="application/x-www-form-urlencoded">
             @csrf
-            @method("PATCH")
+            @method("patch")
             <input type="hidden" name="id" value="-1">
             <ul class="cd-buttons button">
                 <button type="submit" class="yes" name="status" value="1">Approve</button>
@@ -82,14 +92,14 @@
                         </div>
                         <div class="right">
                             <!-- DEAR BACKEND: ini ya buat price sm status nya klo bingung tell me ya -trid -->
-                            <div>Rp.100.000</div>
-                            <div class="unverified status">Unverified</div>
-                            <div class="verified status">Verified</div>
-                            <div class="rejected status">Rejected</div>
+                            <div>Rp. {{ getPriceConfig($team) }}</div>
+                            <div class="unverified status" @if(!is_null($team->status)) style="display:none;" @endif>Unverified</div>
+                            <div class="verified status" @if($team->status !== 1) style="display:none;" @endif>Verified</div>
+                            <div class="rejected status" @if($team->status !== 0) style="display:none;" @endif>Rejected</div>
                         </div>
                     </div>
                     <div class="button">
-                        <button class="verify">Verify</button>
+                        <button class="verify" data-id="{{$team->id}}">Verify</button>
                         <button class="view">View</button>
                     </div>
                 </div>

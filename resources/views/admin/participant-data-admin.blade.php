@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+function checkVerified($team){
+    if(is_null($team->status)) return "unverified";
+        else if($team->status === 0) return "rejected";
+        else if($team->status === 1) return "verified";
+}
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,7 +57,7 @@
             @if(preg_match("/^(binusian|non\-binusian)$/i", $team->type))
             <div class="section">
                 <div class="box">
-                    <div class="groupName">{{$team->name}}</div>
+                    <div class="groupName {{checkVerified($team)}}">{{$team->name}}</div>
                     <div class="buttons">
                         <a href="{{route("view_team", $team->id)}}"><button id="viewData">View Data</button></a>
                         <a href="{{route("view_edit_team", $team->id)}}"><button id="editData">Edit Data</button></a>

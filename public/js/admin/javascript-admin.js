@@ -1,30 +1,32 @@
 
 $(document).ready(function(){
 
-  
+
 
     $(".bukti").hide();
-    $(".rejected").hide();
-    $(".verified").hide();
+    // $(".rejected").hide();
+    // $(".verified").hide();
 
-    $(".view").click(function(){ 
+    $(".view").click(function(){
         $(this).parents(".box").find(".bukti").addClass("popup").show();
         $(".overlay").css("display", "block");
     });
-        
+
     $(".overlay").click(function(){
         $(".bukti").css("display", "none");
         $("img").removeClass("popup");
         $(".overlay").css("display", "none");
         $(".cd-popup").css("display", "none");
     });
-   
+
     $(".verify").click(function(){
         let thisVerify = this;
 
         $(".alertText").text("Verify Payment for " + $(this).parents(".box").find(".groupName").html());
         $(".cd-popup").css("display", "block");
         $(".overlay").css("display", "block");
+        // console.log([28, this]);
+        $(".cd-popup input[name=id]").attr("value", $(this).attr("data-id"))
 
         $(".yes").click(function(){
             $(thisVerify).parents(".box").find(".status").hide();
@@ -42,6 +44,6 @@ $(document).ready(function(){
 
     });
 
-    
+
 
 });
