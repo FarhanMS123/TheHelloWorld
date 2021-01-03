@@ -12,7 +12,12 @@ class TeamController extends Controller
         $team = $req->user();
         return view("dashboard", compact('team'));
     }
-
+    
+    public function timeline(Request $req){
+        $team = $req->user();
+        return view("timeline", compact('team'));
+    }
+    
     public function payment(Request $req){
         $team = $req->user();
         if(is_null($team->status))
