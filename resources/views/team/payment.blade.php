@@ -21,7 +21,7 @@
 <body>
      <!-- Navbar -->
 <div class="navbar">
-    <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
+    <div><a href="index.html"><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
         <li><a href="{{route('view_dashboard')}}" class="navbar-not-active" id="user-home">Home</a></li>
         <li>
@@ -30,16 +30,21 @@
         <li>
           <a href="{{route('timeline')}}" class="navbar-not-active" id="user-timeline">Timeline</a>
         </li>
-        <li class="login"><a href="/login.html">Logout</a></liv>
+        <form action="{{route("logout")}}" method="post" style="display:inline-block">
+            @csrf
+            <button type="submit" style="border:none; background:none;">
+                <li class="login" type="submit">Logout</li>
+            </button>
+        </form>
     </ul>
 </div>
     <!-- Payment -->
     <div class="user-payment-section" id="user-payment-container">
         <!-- Dashboard Title -->
       <div class="user-dashboard-title">
-          <img src="/Resources/user-line.svg" alt="Line 1" class="user-line1 line">
+          <img src="{{asset("res/user-line.svg")}}" alt="Line 1" class="user-line1 line">
           <h1 class="user-title">Dashboard</h1>
-          <img src="/Resources/user-line.svg" alt="Line 1" class="user-line2 line">
+          <img src="{{asset("res/user-line.svg")}}" alt="Line 1" class="user-line2 line">
       </div>
       <!-- Content -->
       <div class="user-content">
@@ -53,7 +58,7 @@
                       <div class="tutorial-container">
                           <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial1">
                               <p> 1. Periode Registrasi</p>
-                              <input type="image" src="/Resources/user-arrow.svg" id="toggle1" class="arrow">
+                              <input type="image" src="{{asset("res/user-arrow.svg")}}" id="toggle1" class="arrow">
                           </div>
                           <div class="tutorial-content" id="toggle1-content">
                               <p class="text-content">
@@ -73,7 +78,7 @@
                       <div class="tutorial-container">
                           <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial2">
                               <p> 2. Pembayaran Biaya Pendaftaran</p>
-                              <input type="image" src="/Resources/user-arrow.svg" id="toggle2" class="arrow">
+                              <input type="image" src="{{asset("res/user-arrow.svg")}}" id="toggle2" class="arrow">
                           </div>
                           <div class="tutorial-content" id="toggle2-content">
                               <p class="text-content">
@@ -85,7 +90,7 @@
                                   <br>
                                   Atas Nama : ANNISA VINIDYA LARASATI
                                   <br>
-                                  <img src="/Resources/user-qrcode.svg" alt="Qr code" class="qrcode">
+                                  <img src="{{asset("res/user-qrcode.svg")}}" alt="Qr code" class="qrcode">
                               </p>
                           </div>
                       </div>
@@ -93,7 +98,7 @@
                       <div class="tutorial-container">
                           <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial3">
                               <p> 3. Upload Bukti Pembayaran</p>
-                              <input type="image" src="/Resources/user-arrow.svg" id="toggle3" class="arrow">
+                              <input type="image" src="{{asset("res/user-arrow.svg")}}" id="toggle3" class="arrow">
                           </div>
                           <div class="tutorial-content" id="toggle3-content">
                               <p class="text-content">
@@ -117,7 +122,7 @@
                       <div class="tutorial-container">
                           <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial4">
                               <p> 4. Verifikasi Pembayaran</p>
-                              <input type="image" src="/Resources/user-arrow.svg" id="toggle4" class="arrow">
+                              <input type="image" src="{{asset("res/user-arrow.svg")}}" id="toggle4" class="arrow">
                           </div>
                           <div class="tutorial-content" id="toggle4-content">
                               <p class="text-content">

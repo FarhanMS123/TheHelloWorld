@@ -109,21 +109,55 @@
             <div class="dataBiodata">
                 <div class="left">
                     <label for="fullname">Name</label>
-                    <input id="fullname" name="fullname" value="{{$member->fullname}}">
+                    <input id="fullname" name="fullname" value="{{$member->fullname}}"@error('fullname')
+                        class="error" aria-describedby="fullname-error" aria-invalid="true" @enderror @if(isset($_POST["fullname"])) value="{{$_POST["fullname"]}}" @endif>
+                    @error('fullname')
+                    <div id="fullname-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <label for="email">Email</label>
-                    <input id="email" name="email" value="{{$member->email}}">
+                    <input id="email" name="email" value="{{$member->email}}"@error('email')
+                        class="error" aria-describedby="email-error" aria-invalid="true" @enderror @if(isset($_POST["email"])) value="{{$_POST["email"]}}" @endif>
+                    @error('email')
+                    <div id="email-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <label for="whatsapp">Whatsapp Number</label>
-                    <input id="whatsapp" name="whatsapp" value="{{$member->whatsapp}}">
+                    <input id="whatsapp" name="whatsapp" value="{{$member->whatsapp}}"@error('whatsapp')
+                        class="error" aria-describedby="whatsapp-error" aria-invalid="true" @enderror @if(isset($_POST["whatsapp"])) value="{{$_POST["whatsapp"]}}" @endif>
+                    @error('whatsapp')
+                    <div id="whatsapp-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <label for="lineid">Line ID</label>
-                    <input id="lineid" name="lineid" value="{{$member->lineid}}">
+                    <input id="lineid" name="lineid" value="{{$member->lineid}}"@error('lineid')
+                    class="error" aria-describedby="lineid-error" aria-invalid="true" @enderror @if(isset($_POST["lineid"])) value="{{$_POST["lineid"]}}" @endif>
+                    @error('lineid')
+                    <div id="lineid-error" class="error">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="right">
                     <label for="mgit_account">GitLab ID</label>
-                    <input id="mgit_account" name="git_account" value="{{$member->git_account}}">
+                    <input id="mgit_account" name="git_account" value="{{$member->git_account}}"@error('git_account')
+                    class="error" aria-describedby="git_account" aria-invalid="true" @enderror @if(isset($_POST["git_account"])) value="{{$_POST["git_account"]}}" @endif>
+                    @error('git_account')
+                    <div id="git_account-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <label for="mplace_of_birth">Birth Place</label>
-                    <input id="mplace_of_birth" name="place_of_birth" value="{{$member->place_of_birth}}">
+                    <input id="mplace_of_birth" name="place_of_birth" value="{{$member->place_of_birth}}"@error('place_of_birth')
+                    class="error" aria-describedby="place_of_birth" aria-invalid="true" @enderror @if(isset($_POST["place_of_birth"])) value="{{$_POST["place_of_birth"]}}" @endif>
+                    @error('place_of_birth')
+                    <div id="place_of_birth-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <label for="mdate_of_birth">Birth Date</label>
-                    <input id="mdate_of_birth" name="date_of_birth" value="{{$member->date_of_birth}}">
+                    <input id="mdate_of_birth" name="date_of_birth" value="{{$member->date_of_birth}}"@error('date_of_birth')
+                    class="error" aria-describedby="date_of_birth" aria-invalid="true" @enderror @if(isset($_POST["date_of_birth"])) value="{{$_POST["date_of_birth"]}}" @endif>
+                    @error('date_of_birth')
+                    <div id="date_of_birth-error" class="error">{{$message}}</div>
+                    @enderror
+
                     <div class="dataUpload">
                         <label for="midentity" class="id-card">
                             <div>ID Card</div>
@@ -131,7 +165,11 @@
                             <!-- DEAR BACKEND: ini image bukti nya -->
                             <div class="bukti"><img src="{{asset($member->identity)}}" alt=""></div>
                         </label>
-                        <input type="file" id="midentity" name="identity">
+                        <input type="file" id="midentity" name="identity"@error('identity')
+                        class="error" aria-describedby="identity" aria-invalid="true" @enderror>
+                        @error('identity')
+                        <div id="identity-error" class="error">{{$message}}</div>
+                        @enderror
 
                         <label for="mcv" class="cv">
                             <div>CV</div>
@@ -139,7 +177,11 @@
                             <!-- DEAR BACKEND: ini image bukti nya -->
                             <div class="bukti"><img src="{{asset($member->cv)}}" alt=""></div>
                         </label>
-                        <input type="file" id="mcv" name="cv">
+                        <input type="file" id="mcv" name="cv"@error('cv')
+                        class="error" aria-describedby="cv" aria-invalid="true" @enderror>
+                        @error('cv')
+                        <div id="cv-error" class="error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
             </div>
