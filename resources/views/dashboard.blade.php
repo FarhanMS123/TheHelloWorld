@@ -28,7 +28,7 @@
           <a href="{{route('payment')}}" class="navbar-not-active" id="user-payment">Payment</a>
         </li>
         <li>
-          <a href="/User/user-timeline.html" class="navbar-not-active" id="user-timeline">Timeline</a>
+          <a href="{{route('timeline')}}" class="navbar-not-active" id="user-timeline">Timeline</a>
         </li>
         <li class="login"><a href="/login.html">Logout</a></liv>
     </ul>
