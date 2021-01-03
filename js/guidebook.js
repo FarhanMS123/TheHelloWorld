@@ -11,6 +11,7 @@ $(document).ready(function () {
         } else if (scroll > 9150) {
             $("#guidebook-container").hide();
             $("#guidebook-footer-container").show();
+            x = 1;
         }
     });
 });

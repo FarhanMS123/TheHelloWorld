@@ -58,3 +58,16 @@ body {
 .footer-subtext {
     color: white;
 }
+
+.footer-link-text {
+    font-size: 16px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
