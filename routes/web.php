@@ -16,8 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 // ### PUBLIC ROUTES ###
 Route::get('/', 'IndexController@index')->name('home');
-Route::get('/sendemail', 'IndexController@index')->name('sendemail');
-Route::post('/sendemail/send', 'IndexController@send')->name('send');
+Route::post('/send', 'IndexController@send')->name('send');
 
 // ### GUEST ###########
 Route::group(["middleware" => ['guest']], function(){
