@@ -13,6 +13,7 @@
     width: 100%;
     height: 700px;
     background: linear-gradient(180deg, #151531 0%, #421A92 100%);
+    position: relative;
   }
   .title-timeline {
     text-align: center;
@@ -72,4 +73,9 @@
   
   .timeline-subtext {
     color: white;
+  }
+
+  .timeline-circle {
+    position: absolute;
+    bottom: 25px;
   }

@@ -161,3 +161,14 @@ body {
   filter: brightness(50%);
 }
 
+.aboutus-circle1 {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+}
+
+.aboutus-circle2 {
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+}

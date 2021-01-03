@@ -83,6 +83,9 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+#whyjoin-subtext1 {
+ display: none; 
+}
 /* MENTORING WITH EXPERTS */
 .whyjoin-content2-container {
     padding-left: 30px;
