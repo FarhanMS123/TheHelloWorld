@@ -239,6 +239,9 @@ html {
     position: relative;
 }
 
+#submit-bukti {
+    right: 250px;
+}
 .submit-text {
     padding-top: 2px;
 }
