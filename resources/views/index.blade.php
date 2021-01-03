@@ -31,7 +31,7 @@
 
 <!-- Navbar -->
 <div class="navbar">
-    <div><a href="{{route('home')}}"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
+    <div><a href="{{route('home')}}"><img src="{{url('/res/home-logoHackathon.png')}}" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
         <li>Home</li>
         <li>Champion Prizes</li>
@@ -57,23 +57,23 @@
         <input type="radio" name="testimonial" id="t-5">
         <div class="testimonials">
             <label class="item" for="t-1">
-                <img src="/Resources/home-carousel1.jpg" alt="picture">
+                <img src="{{url('/res/home-carousel1.jpg')}}" alt="picture">
                 <h2>Hackhathon 1.0</h2>
             </label>
             <label class="item" for="t-2">
-                <img src="/Resources/home-carousel2.jpg" alt="picture">
+                <img src="{{url('/res/home-carousel2.jpg')}}" alt="picture">
                 <h2>Hackathon 2.0</h2>
             </label>
             <label class="item" for="t-3">
-                <img src="/Resources/home-carousel3.jpg" alt="picture">
+                <img src="{{url('/res/home-carousel3.jpg')}}" alt="picture">
                 <h2>Hackathon 2.0</h2>
             </label>
             <label class="item" for="t-4">
-                <img src="/Resources/home-carousel4.jpg" alt="picture">
+                <img src="{{url('/res/home-carousel4.jpg')}}" alt="picture">
                 <h2>Hackathon 3.0</h2>
             </label>
             <label class="item" for="t-5">
-                <img src="/Resources/home-carousel5.jpg" alt="picture">
+                <img src="{{url('/res/home-carousel5.jpg')}}" alt="picture">
                 <h2>Hackathon 3.0</h2>
             </label>
         </div>
@@ -94,9 +94,9 @@
     <div class="arrow2"></div>
 
     <!-- ellipse -->
-    <div class="ellipse1"><img src="/Resources/home-Ellipse1.png" alt=""></div>
-    <div class="ellipse2"><img src="/Resources/home-ellipse2.png" alt=""></div>
-    <div class="ellipse3"><img src="/Resources/home-Ellipse3.png" alt=""></div>
+    <div class="ellipse1"><img src="{{url('/res/home-Ellipse1.png')}}" alt=""></div>
+    <div class="ellipse2"><img src="{{url('/res/home-ellipse2.png')}}" alt=""></div>
+    <div class="ellipse3"><img src="{{url('/res/home-Ellipse3.png')}}" alt=""></div>
 </div>
 
 <!-- champion prizes -->
@@ -147,8 +147,8 @@
     </div>
 
     <!-- ellipse -->
-    <div class="ellipse1"><img src="/Resources/championprizes-ellipse1.png" alt=""></div>
-    <div class="ellipse2"><img src="/Resources/championprizes-ellipse2.png" alt="" height="350px"></div>
+    <div class="ellipse1"><img src="{{url('/res/championprizes-ellipse1.png')}}" alt=""></div>
+    <div class="ellipse2"><img src="{{url('/res/championprizes-ellipse2.png')}}" alt="" height="350px"></div>
 
 </div>
 
@@ -173,7 +173,7 @@
           </div>
         </div>
         <div class="about-us-right">
-          <img src="/Resources/aboutus-pic1.png" alt="about-us-pic" class="about-us-pic" height="300px">
+          <img src="{{url('/res/aboutus-pic1.png')}}" alt="about-us-pic" class="about-us-pic" height="300px">
         </div>
     </div>
   </div>
@@ -186,8 +186,8 @@
         <!-- Chance of Job Interview -->
         <div class="whyjoin-content1-container">
             <div class="whyjoin-pic1-container">
-                <img src="/Resources/whyjoin-pic1.svg" alt="pic1" class="whyjoin-pic1">
-                <img src="/Resources/whyjoin-circle.svg" alt="circle" class="whyjoin-circle spin">
+                <img src="{{url('/res/whyjoin-pic1.svg')}}" alt="pic1" class="whyjoin-pic1">
+                <img src="{{url('/res/whyjoin-circle.svg')}}" alt="circle" class="whyjoin-circle spin">
             </div>
             <div class="whyjoin-text1-container">
                 <div class="whyjoin-text1-background">
@@ -199,8 +199,8 @@
         <!-- Mentoring with Experts -->
         <div class="whyjoin-content1-container whyjoin-content2-container">
             <div class="whyjoin-pic1-container">
-                <img src="/Resources/whyjoin-pic2.svg" alt="pic1" class="whyjoin-pic1 whyjoin-pic2">
-                <img src="/Resources/whyjoin-circle.svg" alt="circle" class="whyjoin-circle spin">
+                <img src="{{url('/res/whyjoin-pic2.svg')}}" alt="pic1" class="whyjoin-pic1 whyjoin-pic2">
+                <img src="{{url('/res/whyjoin-circle.svg')}}" alt="circle" class="whyjoin-circle spin">
             </div>
             <div class="whyjoin-text1-container">
                 <div class="whyjoin-text1-background whyjoin-text2-background">
@@ -215,8 +215,8 @@
         <!-- Networking -->
         <div class="whyjoin-content1-container">
             <div class="whyjoin-pic1-container">
-                <img src="/Resources/whyjoin-pic3.svg" alt="pic1" class="whyjoin-pic1 whyjoin-pic3">
-                <img src="/Resources/whyjoin-circle.svg" alt="circle" class="whyjoin-circle spin">
+                <img src="{{url('/res/whyjoin-pic3.svg')}}" alt="pic1" class="whyjoin-pic1 whyjoin-pic3">
+                <img src="{{url('/res/whyjoin-circle.svg')}}" alt="circle" class="whyjoin-circle spin">
             </div>
             <div class="whyjoin-text1-container">
                 <div class="whyjoin-text1-background">
@@ -240,7 +240,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial1">
                     <p> Apa itu Hackathon 4.0 ?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle1" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle1" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle1-content">
                     <p class="text-content">
@@ -255,7 +255,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial2">
                     <p>Apakah Hackathon 4.0 akan diadakan secara online?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle2" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle2" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle2-content">
                     <p class="text-content">
@@ -268,7 +268,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial3">
                     <p> Apakah Hackathon 4.0 dipungut biaya?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle3" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle3" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle3-content">
                     <p class="text-content">
@@ -287,7 +287,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial4">
                     <p>Apa saja hal yang diperlukan untuk mendaftar sebagai peserta?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle4" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle4" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle4-content">
                     <p class="text-content">
@@ -302,7 +302,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial5">
                     <p> Apa saja persyaratan untuk menjadi peserta dalam Hackathon 4.0 ini?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle5" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle5" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle5-content">
                     <p class="text-content">
@@ -322,7 +322,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial6">
                     <p>Apakah peserta diwajibkan untuk membentuk tim saat mengikuti Hackathon 4.0?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle6" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle6" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle6-content">
                     <p class="text-content">
@@ -337,7 +337,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial7">
                     <p>Apakah peserta diperbolehkan untuk terdaftar di 2 tim?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle7" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle7" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle7-content">
                     <p class="text-content">
@@ -350,7 +350,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial8">
                     <p> Bagaimana jika saat event ini berlangsung, saya ada kepentingan lain yang harus dilakukan?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle8" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle8" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle8-content">
                     <p class="text-content">
@@ -364,7 +364,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial9">
                     <p>Kapan pendaftaran ditutup?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle9" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle9" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle9-content">
                     <p class="text-content">
@@ -377,7 +377,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial10">
                     <p> Bagaimana jika peserta sudah menyiapkan sebagian source code sebelum event dimulai?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle10" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle10" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle10-content">
                     <p class="text-content">
@@ -392,7 +392,7 @@
             <div class="tutorial-container">
                 <div class="tutorial-subtitle-notactive tutorial-subtitle" id="tutorial11">
                     <p>Bila saya tidak memiliki basic coding maupun design, apakah saya masih boleh ikut?</p>
-                    <input type="image" src="/Resources/user-arrow.svg" id="toggle11" class="arrow">
+                    <input type="image" src="{{url('/res/user-arrow.svg')}}" id="toggle11" class="arrow">
                 </div>
                 <div class="tutorial-content" id="toggle11-content">
                     <p class="text-content">
@@ -410,13 +410,13 @@
     <div class="title-timeline">Timeline</div>
     <div class="timeline-content">
         <div class="timeline-content-icons">
-            <img src="/Resources/timeline-pic1.svg" alt="Open Registration Icon" class="timeline-icons" id="timeline-pic1">
-            <img src="/Resources/timeline-pic2.svg" alt="Close Registration Icon" class="timeline-icons" id="timeline-pic2">
-            <img src="/Resources/timeline-pic3.svg" alt="Technical Meeting Icon" class="timeline-icons" id="timeline-pic3">
-            <img src="/Resources/timeline-pic4.svg" alt="Competition Day Icon" class="timeline-icons" id="timeline-pic4">
+            <img src="{{url('/res/timeline-pic1.svg')}}" alt="Open Registration Icon" class="timeline-icons" id="timeline-pic1">
+            <img src="{{url('/res/timeline-pic2.svg')}}" alt="Close Registration Icon" class="timeline-icons" id="timeline-pic2">
+            <img src="{{url('/res/timeline-pic3.svg')}}" alt="Technical Meeting Icon" class="timeline-icons" id="timeline-pic3">
+            <img src="{{url('/res/timeline-pic4.svg')}}/Resources/timeline-pic4.svg" alt="Competition Day Icon" class="timeline-icons" id="timeline-pic4">
         </div>
         <div class="timeline-content-line">
-            <img src="/Resources/timeline-line.svg" alt="Line" class="timeline-line">
+            <img src="{{url('/res/timeline-line.svg')}}" alt="Line" class="timeline-line">
         </div>
         <div class="timeline-content-text-container">
             <div class="timeline-content-text">
@@ -438,7 +438,7 @@
         </div>
     </div>
     <div class="timeline-circle">
-        <img src="/Resources/timeline-circle.svg" alt="Circle">
+        <img src="{{url('/res/timeline-circle.svg')}}" alt="Circle">
     </div>
 </div>
 
@@ -449,22 +449,22 @@
     <div class="container">
         <div class="subtitle images">Platinum</div>
         <div class="platinum">
-            <a href="https://www.tiket.com/"><img src="/Resources/sponsor-platinum1.png" alt=""></a>
+            <a href="https://www.tiket.com/"><img src="{{url('/res/sponsor-platinum1.png')}}" alt=""></a>
         </div>
         <div class="subtitle">Gold</div>
         <div class="gold images">
-            <a href="https://www.mokapos.com/"><img src="/Resources/sponsor-gold1.png" alt=""></a>
-            <a href="https://www.plugandplaytechcenter.com/"><img src="/Resources/sponsor-gold2.png" alt=""></a>
+            <a href="https://www.mokapos.com/"><img src="{{url('/res/sponsor-gold1.png')}}" alt=""></a>
+            <a href="https://www.plugandplaytechcenter.com/"><img src="{{url('/res/sponsor-gold2.png')}}" alt=""></a>
         </div>
         <div class="subtitle">Silver</div>
         <div class="silver images">
-            <a href="https://strongbee.co.id/"><img src="/Resources/sponsor-silver1.png" alt=""></a>
-            <a href="https://warungpintar.co.id/"><img src="/Resources/sponsor-silver2.png" alt=""></a>
-            <a href="https://helloyuna.io/"><img src="/Resources/sponsor-silver3.png" alt=""></a>
+            <a href="https://strongbee.co.id/"><img src="{{url('/res/sponsor-silver1.png')}}" alt=""></a>
+            <a href="https://warungpintar.co.id/"><img src="{{url('/res/sponsor-silver2.png')}}" alt=""></a>
+            <a href="https://helloyuna.io/"><img src="{{url('/res/sponsor-silver3.png')}}" alt=""></a>
         </div>
     </div>
 
-    <img class="ellipse" src="/Resources/sponsor-ellipse.png" alt="">
+    <img class="ellipse" src="{{url('/res/sponsor-ellipse.png')}}" alt="">
 </div>
 
 <!-- Media Partner -->
@@ -472,49 +472,49 @@
     <div class="title-medpar">Media Partner</div>
     <div class="box">
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic1.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic2.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic3.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic4.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic5.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic6.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic1.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic2.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic3.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic4.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic5.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic6.png')}}" alt=""></a></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic7.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic8.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic9.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic10.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic11.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic13.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic7.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic8.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic9.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic10.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic11.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic13.png')}}" alt=""></a></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic14.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic15.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic16.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic17.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic18.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic19.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic14.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic15.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic16.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic17.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic18.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic19.png')}}" alt=""></a></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic20.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic21.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic22.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic23.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic24.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic26.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic21.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic22.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic23.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic24.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic25.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic26.png')}}" alt=""></a></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic27.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic28.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic29.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic30.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic31.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic32.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic27.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic28.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic29.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic30.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic31.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic32.png')}}" alt=""></a></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic33.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic34.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic35.png" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic33.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic34.png')}}" alt=""></a></div>
+            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="{{url('/res/medpar-pic35.png')}}" alt=""></a></div>
         </div>
     </div>
 </div>
@@ -527,10 +527,10 @@
     <div class="otherevents-content-container">
         <div class="otherevents-subtitle">
             <h2>Virtual Conference</h2>
-            <span class="otherevents-date"><img src="/Resources/otherevents-calendar.svg" alt="Calendar Icon" class="otherevents-icon"><p> Date of event</p></span>
+            <span class="otherevents-date"><img src="{{url('/res/otherevents-calendar.svg')}}" alt="Calendar Icon" class="otherevents-icon"><p> Date of event</p></span>
         </div>
         <div class="otherevents-picture">
-            <a href="https://virtualconference.bncc.net/"><img src="/Resources/otherevents-virtualconf.svg" alt="Virtual Conference"></a>
+            <a href="https://virtualconference.bncc.net/"><img src="{{url('/res/otherevents-virtualconf.svg')}}" alt="Virtual Conference"></a>
         </div>
         <div class="otherevents-text">
             <p>
@@ -548,7 +548,7 @@
             <span class="otherevents-redirect">
                 <a href="https://virtualconference.bncc.net/" class="flexthis">
                     <h3>Visit the Web</h3>
-                    <img src="/Resources/otherevents-redirect.svg" alt="Redirect Icon" class="otherevents-icon" style="width: 20px; margin-left: 15px;">
+                    <img src="{{url('/res/otherevents-redirect.svg')}}" alt="Redirect Icon" class="otherevents-icon" style="width: 20px; margin-left: 15px;">
                 </a>
             </span>
         </div>
@@ -557,10 +557,10 @@
     <div class="otherevents-content-container">
         <div class="otherevents-subtitle">
             <h2>Developer Workshop</h2>
-            <span class="otherevents-date"><img src="/Resources/otherevents-calendar.svg" alt="Calendar Icon" class="otherevents-icon"><p> Date of event</p></span>
+            <span class="otherevents-date"><img src="{{url('/res/otherevents-calendar.svg')}}" alt="Calendar Icon" class="otherevents-icon"><p> Date of event</p></span>
         </div>
         <div class="otherevents-picture">
-            <a href="https://linktr.ee/TechnoScape"><img src="/Resources//otherevents-devwork.svg" alt="Virtual Conference"></a>
+            <a href="https://linktr.ee/TechnoScape"><img src="{{url('/res/otherevents-devwork.svg')}}" alt="Virtual Conference"></a>
         </div>
         <div class="otherevents-text">
             <p>
@@ -575,7 +575,7 @@
             <span class="otherevents-redirect">
                 <a href="https://linktr.ee/TechnoScape" class="flexthis">
                     <h3>Register Now!</h3>
-                    <img src="/Resources/otherevents-redirect.svg" alt="Redirect Icon" class="otherevents-icon" style="width: 17px; margin-left: 15px;">
+                    <img src="{{url('/res/otherevents-redirect.svg')}}" alt="Redirect Icon" class="otherevents-icon" style="width: 17px; margin-left: 15px;">
                 </a>
             </span>
         </div>
@@ -608,26 +608,26 @@
     </div>
 
     <div class="contactus-right">
-        <div class="image"><img src="/Resources/contactus-pic.png" alt="" height="250px"></div>
+        <div class="image"><img src="{{url('/res/contactus-pic.png')}}" alt="" height="250px"></div>
         <div class="socmed">
             <a href="https://www.instagram.com/bnccbinus/?hl=en" target="_blank"><div class="line" >
-                <div class="icon"><img src="/Resources/contactus-icon1.png" alt=""></div>
+                <div class="icon"><img src="{{url('/res/contactus-icon1.png')}}" alt=""></div>
                 <div class="text">@bnccbinus</div>
             </div></a>
             <div class="line">
-                <div class="icon"><img src="/Resources/contactus-icon2.png" alt=""></div>
+                <div class="icon"><img src="{{url('/res/contactus-icon2.png')}}" alt=""></div>
                 <div class="text">technoscape@bncc.net</div>
             </div>
             <a href="https://twitter.com/bncc_binus?lang=en" target="_blank" rel="noopener noreferrer"><div class="line">
-                <div class="icon"><img src="/Resources/contactus-icon3.png" alt=""></div>
+                <div class="icon"><img src="{{url('/res/contactus-icon3.png')}}" alt=""></div>
                 <div class="text">@BNCC_Binus</div>
             </div></a>
             <a href="https://www.facebook.com/bina.nusantara.computer.club/" target="_blank" rel="noopener noreferrer"><div class="line">
-                <div class="icon"><img src="/Resources/contactus-icon4.png" alt=""></div>
+                <div class="icon"><img src="{{url('/res/contactus-icon4.png')}}" alt=""></div>
                 <div class="text">Bina Nusantara Computer Club</div>
             </div></a>
             <a href="https://www.linkedin.com/company/bina-nusantara-computer-club/?originalSubdomain=id" target="_blank" rel="noopener noreferrer"><div class="line">
-                <div class="icon"><img src="/Resources/contactus-icon5.png" alt=""></div>
+                <div class="icon"><img src="{{url('/res/contactus-icon5.png')}}" alt=""></div>
                 <div class="text">Bina Nusantara Computer Club</div>
             </div></a>
         </div>
@@ -640,14 +640,14 @@
     <div class="footer-content-container">
         <div class="footer-organized">
             <p class="footer-subtext">Organized By</p>
-            <a href="https://bncc.net/"><img src="/Resources/footer-bncc.svg" alt="Logo BNCC" class="footer-bncc"></a>
+            <a href="https://bncc.net/"><img src="{{url('/res/footer-bncc.svg')}}" alt="Logo BNCC" class="footer-bncc"></a>
         </div>
         <div class="footer-copyright">
             <h6 class="footer-copyright-text">© 2020 Bina Nusantara Computer Club, All right Reserved</h6>
         </div>
         <div class="footer-powered">
             <p class="footer-subtext">Powered By</p>
-            <a href="https://binus.ac.id/"><img src="/Resources/footer-binus.svg" alt="Logo Binus" class="footer-binus"></a>
+            <a href="https://binus.ac.id/"><img src="{{url('/res/footer-binus.svg')}}" alt="Logo Binus" class="footer-binus"></a>
         </div>
     </div>
 </footer>
