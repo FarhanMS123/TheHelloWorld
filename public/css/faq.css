@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+}
+ body {
+    width: 100%;
+    min-width: 1080px;
+    font-family: "Poppins", sans-serif;
+}
+.section-faq {
+    width: 100%;
+    height: fit-content;
+    background: #151531;
+    background-position: bottom;
+    position: relative;
+    overflow: hidden;
+}
+.title-faq {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+    padding-top: 80px;
+    margin-bottom: 30px;
+    color: #39beff;
+}
+
+.faq-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 980px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.faq-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 580px;
+    margin-right: 10px;
+}
+
+.faq-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    width: 580px;
+    margin-left: 10px;
+}
+
+/* Tutorial Drop Down */
+.tutorial-container {
+    margin-bottom: 20px;
+}
+/* Animation Tutorial Subtitle */
+.tutorial-subtitle-notactive {
+    width: 450px;
+    height: 70px;
+    background: #421A92;
+    border-radius: 16px 16px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: 0.3s;
+    color: white;
+}
+.tutorial-subtitle {
+    width: 450px;
+    height: 70px;
+    background: #421A92;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    font-weight: 400;
+}
+.tutorial-content{
+    width: 480px;
+    height: fit-content;
+    background: #240F4F;
+    border-radius: 0px 0px 16px 16px;
+    display: none;
+    
+}
+.text-content {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    font-weight: 300;
+}
+.arrow {
+    width: 25px;
+    outline: none;
+}

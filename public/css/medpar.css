@@ -1,0 +1,43 @@
+.medpar{
+    width: 100%;
+    background-color: #151531;
+    height: 950px;
+}
+
+.title-medpar {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 72px;
+    padding-top: 80px;
+    margin-bottom: 50px;
+    color: #39beff;
+}
+
+.medpar .box{
+    background: rgba(49, 49, 102, 0.9);
+    border-radius: 48px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px;
+    height: fit-content;
+}
+
+.medpar .line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.medpar .image{
+    margin: 10px;
+}
+
+.medpar img{
+    width: 100px;
+}
