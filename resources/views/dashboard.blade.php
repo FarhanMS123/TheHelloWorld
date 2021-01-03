@@ -23,9 +23,9 @@
 <div class="navbar">
     <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li><a href="/User/indexUser.html" class="navbar-active" id="user-home">Home</a></li>
+        <li><a href="{{route('dashboard')}}" class="navbar-active" id="user-home">Home</a></li>
         <li>
-          <a href="/User/user-payment.html" class="navbar-not-active" id="user-payment">Payment</a>
+          <a href="{{route('payment')}}" class="navbar-not-active" id="user-payment">Payment</a>
         </li>
         <li>
           <a href="/User/user-timeline.html" class="navbar-not-active" id="user-timeline">Timeline</a>
