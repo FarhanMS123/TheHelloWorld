@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- CSS links: -->
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/aboutus.css">
@@ -33,12 +32,12 @@
 <div class="navbar">
     <div><a href="index.html"><img src="/Resources/home-logoHackathon.png" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li>Home</li>
-        <li>Champion Prizes</li>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Timeline</li>
-        <li class="login"><a href="login.html">Login</a></liv>
+        <li><a href=#home>Home</li>
+        <li><a href=#champion>Champion Prizes</a></li>
+        <li><a href=#about>About</a></li>
+        <li><a href=#faq>FAQ</a></li>
+        <li><a href=#timeline>Timeline</a></li>
+        <li class="login"><a href="login.html">Login</a></li>
     </ul>  
 </div>
 
@@ -56,7 +55,7 @@
 </div>
 
 <!-- Home -->
-<div class="home">
+<div class="home parent" id="home">
     <!-- upper text -->
     <div class="title">Hackathon 4.0</div>
     <div class="slogan">Transform ideas, Code Your Solution</div>
@@ -100,7 +99,7 @@
     </div>
 
     <!-- findoutmore -->
-    <a href="#aboutus"><div class="findoutmore">
+    <a href="#about"><div class="findoutmore">
         <div class="text">Find Out More</div>  
     </div></a>
     <div class="arrow1"></div>
@@ -113,7 +112,7 @@
 </div>
 
 <!-- champion prizes -->
-<div class="championprizes">
+<div class="championprizes parent" id="champion">
     <div class="title-championprizes">Champion Prizes</div>
 
     <!-- boxes -->
@@ -166,8 +165,7 @@
 </div>
 
 <!-- About Us Section -->
-<div id="aboutus"></div>
-<div class="section-aboutus">
+<div class="section-aboutus parent" id="about">
     <div class="title-aboutus">About Hackathon 4.0</div>
     <div class="about-us-content">
         <div class="about-us-left">
@@ -243,7 +241,7 @@
 </div>
 
 <!-- FAQ -->
-<div class="section-faq">
+<div class="section-faq parent" id="faq">
     <div class="title-faq">FAQ</div>
     <div class="faq-content-container">
         <!-- Content -->
@@ -419,7 +417,7 @@
 </div>
 
 <!-- Timeline -->
-<div class="section-timeline">
+<div class="section-timeline parent" id="timeline">
     <div class="title-timeline">Timeline</div>
     <div class="timeline-content">
         <div class="timeline-content-icons">
@@ -462,18 +460,18 @@
     <div class="container">
         <div class="subtitle images">Platinum</div>
         <div class="platinum">
-            <a href="https://www.tiket.com/"><img src="/Resources/sponsor-platinum1.png" alt=""></a>
+            <a href="https://www.tiket.com/" target="_blank"><img src="/Resources/sponsor-platinum1.png" alt=""></a>
         </div>
         <div class="subtitle">Gold</div>
         <div class="gold images">
-            <a href="https://www.mokapos.com/"><img src="/Resources/sponsor-gold1.png" alt=""></a>
-            <a href="https://www.plugandplaytechcenter.com/"><img src="/Resources/sponsor-gold2.png" alt=""></a>
+            <a href="https://www.mokapos.com/" target="_blank"><img src="/Resources/sponsor-gold1.png" alt=""></a>
+            <a href="https://www.plugandplaytechcenter.com/" target="_blank"><img src="/Resources/sponsor-gold2.png" alt=""></a>
         </div>
         <div class="subtitle">Silver</div>
         <div class="silver images">
-            <a href="https://strongbee.co.id/"><img src="/Resources/sponsor-silver1.png" alt=""></a>
-            <a href="https://warungpintar.co.id/"><img src="/Resources/sponsor-silver2.png" alt=""></a>
-            <a href="https://helloyuna.io/"><img src="/Resources/sponsor-silver3.png" alt=""></a>
+            <a href="https://strongbee.co.id/" target="_blank"><img src="/Resources/sponsor-silver1.png" alt=""></a>
+            <a href="https://warungpintar.co.id/" target="_blank"><img src="/Resources/sponsor-silver2.png" alt=""></a>
+            <a href="https://helloyuna.io/" target="_blank"><img src="/Resources/sponsor-silver3.png" alt=""></a>
         </div>
     </div>
 
@@ -485,49 +483,49 @@
     <div class="title-medpar">Media Partner</div>
     <div class="box">
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic1.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic2.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic3.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic4.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic5.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic6.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic1.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic2.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic3.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic4.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic5.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic6.png" alt=""></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic7.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic8.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic9.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic10.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic11.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic13.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic7.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic8.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic9.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic10.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic11.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic13.png" alt=""></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic14.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic15.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic16.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic17.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic18.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic19.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic14.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic15.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic16.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic17.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic18.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic19.png" alt=""></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic20.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic21.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic22.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic23.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic24.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic26.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic20.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic21.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic22.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic23.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic24.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic26.png" alt=""></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic27.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic28.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic29.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic30.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic31.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic32.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic27.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic28.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic29.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic30.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic31.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic32.png" alt=""></div>
         </div>
         <div class="line">
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic33.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic34.png" alt=""></a></div>
-            <div class="image"><a href="http://" target="_blank" rel="noopener noreferrer"><img src="/Resources/medpar-pic35.png" alt=""></a></div>
+            <div class="image"><img src="/Resources/medpar-pic33.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic34.png" alt=""></div>
+            <div class="image"><img src="/Resources/medpar-pic35.png" alt=""></div>
         </div>
     </div>
 </div>
@@ -680,10 +678,12 @@
     </div>
 </footer>
 
-
-
-
 <!-- JAVASCRIPT links: -->
+<script src="/js/home.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
 <script src="/js/contactus.js"></script>
 <script src="/js/faq.js"></script>
 <script src="/js/guidebook.js"></script>

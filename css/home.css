@@ -176,7 +176,6 @@ body{
 /* First */
 #t-1:checked ~ .testimonials label[for="t-1"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-1:checked ~ .dots label[for="t-1"] {
 	transform: scale(2);
@@ -186,7 +185,7 @@ body{
 	transform: scale(1.5);
 }
 #t-1:checked ~ .testimonials label[for="t-1"] {
-	z-index: 4;
+    z-index: 4;
 }
 #t-1:checked ~ .testimonials label[for="t-2"] {
 	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
@@ -207,7 +206,6 @@ body{
 /* Second */
 #t-2:checked ~ .testimonials label[for="t-2"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-2:checked ~ .dots label[for="t-1"] {
 	transform: scale(1.5);
@@ -240,7 +238,6 @@ body{
 /* Third */
 #t-3:checked ~ .testimonials label[for="t-3"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-3:checked ~ .dots label[for="t-2"] {
 	transform: scale(1.5);
@@ -272,7 +269,6 @@ body{
 /* Fourth */
 #t-4:checked ~ .testimonials label[for="t-4"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-4:checked ~ .dots label[for="t-3"] {
 	transform: scale(1.5);
@@ -305,7 +301,6 @@ body{
 /* Fifth */
 #t-5:checked ~ .testimonials label[for="t-5"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-5:checked ~ .dots label[for="t-4"] {
 	transform: scale(1.5);
@@ -402,3 +397,10 @@ body{
     /* z-index: -1; */
 }
 
+.activebutton{
+    color: #79D3FF;
+}
+
+.homebutton, .championbutton, .aboutbutton, .faqbutton, .timelinebutton{
+    color: white;
+}
