@@ -217,6 +217,7 @@
   </div>
     <!-- JS -->
     <script src="{{url('/js/scriptUser.js')}}"></script>
+    <script src="{{url('/js/scriptUserPayment.js')}}"></script>
     <!-- Modal CSS -->
     <link rel="stylesheet" href="{{url('/css/styleUserModal.css')}}">
 </body>
