@@ -192,6 +192,8 @@
         <div class="about-us-right">
           <img src="{{url('/res/aboutus-pic1.png')}}" alt="about-us-pic" class="about-us-pic" height="300px">
         </div>
+        <div class="aboutus-circle1"><img src="{{url('/res/aboutus-circle1.png')}}" alt="" ></div>
+        <div class="aboutus-circle2"><img src="{{url('/res/aboutus-circle2.svg')}}" alt="" ></div>
     </div>
   </div>
 
@@ -420,6 +422,9 @@
             </div>
         </div>
     </div>
+    <div class="faq-circle1"><img src="{{url('/res/faq-circle1.svg')}}" alt=""></div>
+    <div class="faq-circle2"><img src="{{url('/res/faq-circle2.svg')}}" alt=""></div>
+    <div class="faq-circle3"><img src="{{url('/res/faq-circle3.svg')}}" alt=""></div>
 </div>
 
 <!-- Timeline -->
