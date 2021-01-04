@@ -64,6 +64,7 @@ return [
 > composer dump-autoload
 > php artisan migrate
 > php artisan db:seed --class=AdminSeeder
+> php artisan storage:link
 ```
 
 7. Serve it.
