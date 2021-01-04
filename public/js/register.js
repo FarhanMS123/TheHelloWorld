@@ -16,14 +16,13 @@ $(document).ready(function(){
         });
 
 
-        $("form[name='registration']").validate({
-
+        $("form").validate({
+ 
         rules: {
             name: {
                 required: true,
                 minlength: 3,
                 letters: true,
-                // remote: 'App\Team,name'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             password: {
@@ -31,8 +30,7 @@ $(document).ready(function(){
                 minlength: 8,
                 required: true,
             },
-            // confirmpassword: {
-            password_confirmation: {
+            confirmpassword: {
                 equalTo: "#password"
             },
             type:{
@@ -45,19 +43,16 @@ $(document).ready(function(){
             email: {
                 required: true,
                 email: true,
-                // remote: 'App\Member,email'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             whatsapp: {
                 required: true,
                 minlength: 9,
                 telephone: true,
-                // remote:'App\Member,whatsapp'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             lineid: {
                 required: true,
-                // remote:'App\Member,lineid'
                 // remote untuk unique KAYAKNYA SI GINI gue g bs trials and errors sih
             },
             git_account: {
@@ -83,14 +78,13 @@ $(document).ready(function(){
 
         messages: {
             name:{
-                required: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
+                required: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.", 
                 minlength: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
                 letters: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
                 remote: "*This group name is already taken."
             } ,
             password: "*Please specify a valid password. Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character.",
-            // confirmpassword: "*Password dont match.",
-            password_confirmation: "*Password dont match.",
+            confirmpassword: "*Password dont match.",
             type: "*Please specify whether your group are binusians or non-binusians.",
             fullname: "*Please specify your leader name. Only letters and spaces are allowed.",
             email: {
@@ -99,8 +93,8 @@ $(document).ready(function(){
                 remote: "*This email is already taken."
             } ,
             whatsapp: {
-                required: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
-                minlength: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
+                required: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ", 
+                minlength: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ", 
                 telephone: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
                 remote: "*This Whatsapp number is already taken."
             } ,
@@ -119,14 +113,14 @@ $(document).ready(function(){
         errorElement : 'div',
 
         //location for error message radio button
-        errorPlacement: function(error, element)
+        errorPlacement: function(error, element) 
         {
-            if ( element.is(":radio") )
+            if ( element.is(":radio") ) 
             {
                 error.appendTo( element.parents('.radio-parent') );
             }
-            else
-            {
+            else 
+            {  
                 error.insertAfter( element );
             }
          },
@@ -137,13 +131,16 @@ $(document).ready(function(){
         }
         });
     });
-
+     
     //to display uploaded file name
      $("#cv").change(function(){
-        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).preventDefault();
+        $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''));
+        
      });
      $("#identity").change(function(){
-        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''))
+        $(this).off('wheel.disableScroll');
+        $('.id-card div').text(this.value.replace(/C:\\fakepath\\/i, ''));
      });
 
 });
