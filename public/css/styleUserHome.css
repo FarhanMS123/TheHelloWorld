@@ -7,6 +7,9 @@
 /* *{
     outline: 1px solid red;
    } */
+html {
+   scroll-behavior: smooth;
+}
 textarea:focus, input:focus{
     outline: none;
 }
@@ -21,13 +24,13 @@ html,body
     width: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 /* Navbar */
 .navbar{
     display: flex;
     flex-direction: row;
-    background-color: #292957;
+    background-color: #292957;  
     justify-content: space-between;
     height: 80px;
     padding-left: 20px;
@@ -35,7 +38,7 @@ html,body
     width: 100%;
     z-index: 999999;
     min-width: 1080px;
-
+    
 }
 
 .navbar ul{
@@ -66,9 +69,9 @@ html,body
     padding: 5px 15px;
     margin: 0 30px;
     /* gradient border: */
-    background:
-    linear-gradient(to right,  #292957,  #292957),
-    linear-gradient(100deg,  #C051FF, #292957,#39BEFF);
+    background: 
+    linear-gradient(to right,  #292957,  #292957), 
+    linear-gradient(100deg,  #C051FF, #292957,#39BEFF); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 
@@ -285,12 +288,12 @@ html,body
 }
 /* Upload File */
 input[type=file]{
-    position: absolute;
-    top: 0;
-    z-index: 1;
+    position: relative;
+    margin-top: -1.5em;
+    z-index: -1;
     color: transparent;
-
 }
+
 .upload::-webkit-file-upload-button{
     visibility: hidden;
 }
@@ -304,6 +307,28 @@ input[type=file]{
 
 .cv:hover, .id-card:hover{
     cursor: pointer;
+}
+
+#id-card-label {
+    width:500px;
+}
+.button-border1 {
+    /* Content */
+    width: 300px;
+    height: 50px;
+    color: white;
+    text-align: left;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+    font-size: 15px;
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 15px;
 }
 /* Submit Button */
 .button-container {

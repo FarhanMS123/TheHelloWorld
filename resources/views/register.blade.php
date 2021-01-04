@@ -24,14 +24,14 @@
 
     <!-- Navbar -->
 <div class="navbar">
-    <div><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></div>
+    <div><a href="{{route('home')}}"><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li>Home</li>
-        <li>Champion Prizes</li>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Timeline</li>
-        <li class="login">Login</li>
+        <li><a href="{{route("home")}}#home">Home</a></li>
+        <li><a href="{{route("home")}}#champion">Champion Prizes</a></li>
+        <li><a href="{{route("home")}}#about">About</a></li>
+        <li><a href="{{route("home")}}#faq">FAQ</a></li>
+        <li><a href="{{route("home")}}#timeline">Timeline</a></li>
+        <li class="login"><a href="{{route("view_login")}}">Login</a></li>
     </ul>
 </div>
 

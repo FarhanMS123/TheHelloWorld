@@ -38,7 +38,12 @@
         <li>About</li>
         <li>FAQ</li>
         <li>Timeline</li>
-        <li class="login"><a href="{{route('login')}}">Login</a></liv>
+        @guest
+        <li class="login"><a href="{{route('login')}}">Login</a></li>
+        @endguest
+        @auth
+        <li class="login" style="width:auto"><a href="{{route('view_dashboard')}}">Dashboard</a></li>
+        @endauth
     </ul>
 </div>
 

@@ -75,7 +75,7 @@
                     <div class="dataUpload">
                         <label for="identity" id="id-card-label" class="id-card">
                             <div>ID Card</div>
-                            <button class="view viewIdentity">View</button>
+                            <button class="view viewIdentity" type="button">View</button>
                             <!-- DEAR BACKEND: ini image bukti nya?? -->
                             <div class="bukti"><img src="{{asset($leader->identity)}}" alt=""></div>
                         </label>
@@ -83,7 +83,7 @@
 
                         <label for="cv" id="cv-label" class="cv">
                             <div>CV</div>
-                            <button class="view viewCV">View</button>
+                            <button class="view viewCV" type="button">View</button>
                             <!-- DEAR BACKEND: ini image bukti nya -->
                             <div class="bukti"><img src="{{asset($leader->cv)}}" alt=""></div>
                         </label>
@@ -120,7 +120,7 @@
                     <div class="dataUpload">
                         <label for="midentity" class="id-card">
                             <div>ID Card</div>
-                            <button class="view">View</button>
+                            <button class="view" type="button">View</button>
                             <!-- DEAR BACKEND: ini image bukti nya -->
                             <div class="bukti"><img src="{{asset($member->identity)}}" alt=""></div>
                         </label>
@@ -128,7 +128,7 @@
 
                         <label for="mcv" class="cv">
                             <div>CV</div>
-                            <button class="view">View</button>
+                            <button class="view" type="button">View</button>
                             <!-- DEAR BACKEND: ini image bukti nya -->
                             <div class="bukti"><img src="{{$member->cv}}" alt=""></div>
                         </label>

@@ -21,7 +21,7 @@
 <body>
     <!-- Navbar -->
     <div class="navbar">
-        <div><a href="index.html"><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></a></div>
+        <div><a href="{{route("home")}}"><img src="{{asset("res/home-logoHackathon.png")}}" alt="logo-hackathon" height="130px"></a></div>
         <ul class="list-container">
             <li><a href="{{route('view_dashboard')}}" class="navbar-not-active" id="user-home">Home</a></li>
             <li>

@@ -17,12 +17,11 @@ class AuthController extends Controller
 {
     public function view_dashboard(Request $req){
         if($team = $req->user()){
-            if(preg_match("/^(binusian|non\-binusian)$/i", $team->type)){
+            if(preg_match("/^(binusian|non\-binusian)$/i", $team->type))
                 return (new TeamController())->view_dashboard($req);
-            }else if(preg_match("/^admin$/i", $team->type)){
-                // return (new AdminController())->index_payment($req);
+            else if(preg_match("/^admin$/i", $team->type))
                 return redirect()->route("index_payment");
-            }
+
             return redirect()->route("home");
         }
         return redirect()->route("view_login");
@@ -41,13 +40,14 @@ class AuthController extends Controller
             "password" => ["required", "string"],
             "remember" => ["nullable", "regex:/^(yes|on|1|true)$/i"]
         ]);
-        // print_r($val);
-        // die();
+
+        $isRemember = isset($val["remember"]) && preg_match("/^(yes|on|1|true)$/i", $val["remember"]);
         $auth = Auth::guard("team")->attempt([
             "name" => $val["name"],
             "password" => $val["password"]],
-            isset($val["remember"]) && preg_match("/^(yes|on|1|true)$/i", $val["remember"]));
-        if($auth){
+            $isRemember);
+
+            if($auth){
             return redirect()->route("view_dashboard");
         }
         return view("login")->withErrors([__("auth.failed")]);
@@ -69,7 +69,6 @@ class AuthController extends Controller
 
             // ### MEMBER #######
             "fullname" => ["required", "string"],
-            // "type" => ["required", "string", "regex:/^(leader|member)$/i"],
             "email" => ["required", "string", "unique:App\Member,email",
                         "regex:/^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$/"],
             "place_of_birth" => ["required", "string"],
@@ -93,7 +92,6 @@ class AuthController extends Controller
 
         $team->members()->create([
             "fullname" => $req->fullname,
-            // "type" => $req->type,
             "type" => "leader",
             "email" => $req->email,
             "place_of_birth" => $req->place_of_birth,

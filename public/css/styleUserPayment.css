@@ -4,6 +4,9 @@
     text-decoration: none;
     color: inherit;
 }
+html {
+    scroll-behavior: smooth;
+}
 .user-payment-section {
     background: linear-gradient(180deg, #421A92 0%, #151531 100%);
     height: fit-content;
@@ -204,7 +207,7 @@
 .upload-button-container {
     display: flex;
     flex-direction: row;
-
+    
 }
 .bukti-upload {
     color: white;
@@ -236,6 +239,9 @@
     position: relative;
 }
 
+#submit-bukti {
+    right: 250px;
+}
 .submit-text {
     padding-top: 2px;
 }

@@ -4,7 +4,8 @@ This is only `readme` for this project. To see the Laravel License, you could re
 
 ## Setup
 
-Edit `.env` file as below (please give interest to `DB_DATABASE`) :
+1. Copy `.env.example` and paste and rename to `.env`.
+2. Edit `.env` as your preference (please give interest to `DB_DATABASE`) :
 ```
 ...
 
@@ -18,7 +19,32 @@ DB_PASSWORD=
 ...
 ```
 
-, or `CREATE` a database base your prefere.
+, or `CREATE` a database base in your prefere.
+
+4. Open `database/seeds/AdminSeeder.php`, then edit as your preference.
+```php
+...
+
+Team::create([
+    "name" => "BNCC", // edit with whatever username you want
+    "type" => "admin",
+    "password" => Hash::make("Abc123!!!") // edit as password you need
+]);
+
+...
+```
+
+3. Do this in your terminal
+```bash
+> composer install
+> npm install
+> npm run prod
+> composer dump-autoload
+> php artisan migrate
+> php artisan db:seed --class=AdminSeeder
+```
+
+4. Serve it.
 
 ## References
 
