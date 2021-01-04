@@ -60,7 +60,7 @@
 </div>
 
 <!-- Home -->
-<div class="home">
+<div class="home parent" id="home">
     <!-- upper text -->
     <div class="title">Hackathon 4.0</div>
     <div class="slogan">Transform ideas, Code Your Solution</div>
@@ -117,7 +117,7 @@
 </div>
 
 <!-- champion prizes -->
-<div class="championprizes">
+<div class="championprizes parent" id="champion">
     <div class="title-championprizes">Champion Prizes</div>
 
     <!-- boxes -->
@@ -170,8 +170,7 @@
 </div>
 
 <!-- About Us Section -->
-<div id="aboutus"></div>
-<div class="section-aboutus">
+<div class="section-aboutus parent" id="about">
     <div class="title-aboutus">About Hackathon 4.0</div>
     <div class="about-us-content">
         <div class="about-us-left">
@@ -249,7 +248,7 @@
 </div>
 
 <!-- FAQ -->
-<div class="section-faq">
+<div class="section-faq parent" id="faq">
     <div class="title-faq">FAQ</div>
     <div class="faq-content-container">
         <!-- Content -->
@@ -428,7 +427,7 @@
 </div>
 
 <!-- Timeline -->
-<div class="section-timeline">
+<div class="section-timeline parent" id="timeline">
     <div class="title-timeline">Timeline</div>
     <div class="timeline-content">
         <div class="timeline-content-icons">
