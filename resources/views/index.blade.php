@@ -185,7 +185,7 @@
                   <a href="{{route('view_register')}}"> Register</a>
               </button>
               <button class="about-us-button-text" id="button-download-guide-book">
-                  <a href=""> Download Guide Book</a>
+                  <a href="https://hackathon-test.bncc.net/assets/Hackathon%203.0%20Guide%20Book.pdf" target="_blank"> Download Guide Book</a>
               </button>
           </div>
         </div>
