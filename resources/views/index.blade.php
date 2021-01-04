@@ -6,14 +6,13 @@
     <title>BNCC Hackathon 4.0</title>
 
     <!-- logo favicon -->
-    <link rel="shortcut icon" href="/Resources/home-logoHackathon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url('/res/home-logoHackathon.png')}}" type="image/x-icon">
     <!-- font : poppins -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!-- CSS links: -->
     <link rel="stylesheet" href="{{url('/css/home.css')}}">
     <link rel="stylesheet" href="{{url('/css/aboutus.css')}}">
@@ -33,11 +32,11 @@
 <div class="navbar">
     <div><a href="{{route('home')}}"><img src="{{url('/res/home-logoHackathon.png')}}" alt="logo-hackathon" height="130px"></a></div>
     <ul class="list-container">
-        <li>Home</li>
-        <li>Champion Prizes</li>
-        <li>About</li>
-        <li>FAQ</li>
-        <li>Timeline</li>
+       <li><a href=#home>Home</li>
+        <li><a href=#champion>Champion Prizes</a></li>
+        <li><a href=#about>About</a></li>
+        <li><a href=#faq>FAQ</a></li>
+        <li><a href=#timeline>Timeline</a></li>
         @guest
         <li class="login"><a href="{{route('login')}}">Login</a></li>
         @endguest
@@ -45,6 +44,19 @@
         <li class="login" style="width:auto"><a href="{{route('view_dashboard')}}">Dashboard</a></li>
         @endauth
     </ul>
+</div>
+
+<!-- Guidebook -->
+<div class="guidebook" id="guidebook-container">
+    <div class="guidebook-content">
+        <span class="guidebook-text"><p>Haven't downloaded our guide book yet?</p></span>
+        <a href="https://hackathon-test.bncc.net/assets/Hackathon%203.0%20Guide%20Book.pdf">
+            <button class="about-us-button-text" id="button-download-sticky">
+                Download Guide Book
+           </button>
+        </a>
+        <button id="guidebook-close">x</button>
+    </div>
 </div>
 
 <!-- Home -->
@@ -661,8 +673,15 @@
 
 
 <!-- JAVASCRIPT links: -->
+<script src="{{url('/res/home.js')}}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
 <script src="{{url('/js/contactus.js')}}"></script>
 <script src="{{url('/js/faq.js')}}"></script>
+<script src="{{url('/js/guidebook.js')}}"></script>
+<script src="{{url('/js/whyjoin.js')}}"></script>
 
 </body>
 </html>
