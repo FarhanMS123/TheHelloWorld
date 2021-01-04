@@ -188,7 +188,7 @@
                             <span class="button-border">
                                 <label for="identity" id="id-card-label" class="id-card">
                                     <div> Upload ID Card (KTP/Binusian ID)</div>
-                                    <img src="/Resources/register-icon.svg" alt="">
+                                    <img src="{{url('/res/register-icon.svg')}}" alt="">
                                 </label>
                                 <input type="file" id="identity" name="identity">
                             </span>
