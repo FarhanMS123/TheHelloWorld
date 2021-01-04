@@ -34,7 +34,19 @@ Team::create([
 ...
 ```
 
-3. Do this in your terminal
+5. Also config the prices in `config/hackathon.php`
+```php
+return [
+    "price_early_bid" => "134.000",
+    // https://www.php.net/manual/en/datetime.formats.php
+    //                              >> YYYY/mm/dd HH:MM:II
+    "end_time_early_bid" => strtotime("2021/01/12 20:50:30"),
+    "price_binusian" => "212.000",
+    "price_non_binusian" => "385.000"
+];
+```
+
+6. Do this in your terminal
 ```bash
 > composer install
 > npm install
@@ -44,7 +56,7 @@ Team::create([
 > php artisan db:seed --class=AdminSeeder
 ```
 
-4. Serve it.
+7. Serve it.
 
 ## References
 
