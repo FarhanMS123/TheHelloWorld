@@ -105,3 +105,7 @@ body {
 .whyjoin-pic3 {
     width: 95px;
 }
+
+#whyjoin-onclick1:hover, #whyjoin-onclick2:hover, #whyjoin-onclick3:hover {
+  cursor: pointer;
+}
