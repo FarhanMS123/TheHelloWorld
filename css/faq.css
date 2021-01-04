@@ -16,6 +16,7 @@
     background-position: bottom;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 .title-faq {
     text-align: center;
@@ -36,6 +37,7 @@
     width: 980px;
     margin: auto;
     margin-bottom: 100px;
+    z-index: 3;
 }
 
 .faq-content-left {
@@ -46,6 +48,7 @@
     align-content: center;
     width: 580px;
     margin-right: 10px;
+    z-index: 3;
 }
 
 .faq-content-right {
@@ -56,6 +59,7 @@
     align-content: center;
     width: 580px;
     margin-left: 10px;
+    z-index: 3;
 }
 
 /* Tutorial Drop Down */
@@ -113,15 +117,18 @@
     position: absolute;
     top: -30px;
     right: 0px;
+    z-index: 1;
 }
 
 .faq-circle2 {
     position: absolute;
     top: 50%;
+    z-index: 1;
 }
 
 .faq-circle3 {
     position: absolute;
     bottom: -50px;
     right: 0px;
+    z-index: 1;
 }
