@@ -48,9 +48,10 @@
   .timeline-subtitle {
     background: -webkit-linear-gradient(#39BEFF, #404be3);
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .timeline-subtext {
     color: white;
   }

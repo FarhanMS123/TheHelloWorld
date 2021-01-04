@@ -17,6 +17,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+          box-shadow: 0 0 0px 1000px #ffffff inset !important;
 }
 html {
     scroll-behavior: smooth;
@@ -24,6 +25,9 @@ html {
 button{
     outline: none;
 }
+
+
+
 
 body{
     width: 100%;
@@ -34,7 +38,7 @@ body{
 .navbar{
     display: flex;
     flex-direction: row;
-    background-color: #292957;  
+    background-color: #292957;
     justify-content: space-between;
     height: 80px;
     padding-left: 20px;
@@ -42,7 +46,6 @@ body{
     width: 100%;
     z-index: 999999;
     min-width: 100%;
-    
 }
 
 .navbar ul{
@@ -73,9 +76,9 @@ body{
     padding: 5px 15px;
     margin: 0 30px;
     /* gradient border: */
-    background: 
-    linear-gradient(to right,  #292957,  #292957), 
-    linear-gradient(100deg,  #C051FF, #292957,#39BEFF); 
+    background:
+    linear-gradient(to right,  #292957,  #292957),
+    linear-gradient(100deg,  #C051FF, #292957,#39BEFF);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 
@@ -108,6 +111,7 @@ body{
     /* gradient text: */
     background: -webkit-linear-gradient(#79D3FF, #404BE3 );
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -139,7 +143,8 @@ body{
 	width: fit-content;
 	text-align: center;
 	transition: transform 0.4s;
-	-webkit-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
 	box-shadow: 0 0 10px rgba(0,0,0,0.3);
 	user-select: none;
     cursor: pointer;
@@ -174,7 +179,6 @@ body{
 /* First */
 #t-1:checked ~ .testimonials label[for="t-1"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-1:checked ~ .dots label[for="t-1"] {
 	transform: scale(2);
@@ -184,7 +188,7 @@ body{
 	transform: scale(1.5);
 }
 #t-1:checked ~ .testimonials label[for="t-1"] {
-	z-index: 4;
+    z-index: 4;
 }
 #t-1:checked ~ .testimonials label[for="t-2"] {
 	transform: translateX(200px) translateZ(-90px) rotateY(-15deg);
@@ -205,7 +209,6 @@ body{
 /* Second */
 #t-2:checked ~ .testimonials label[for="t-2"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-2:checked ~ .dots label[for="t-1"] {
 	transform: scale(1.5);
@@ -238,7 +241,6 @@ body{
 /* Third */
 #t-3:checked ~ .testimonials label[for="t-3"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-3:checked ~ .dots label[for="t-2"] {
 	transform: scale(1.5);
@@ -270,7 +272,6 @@ body{
 /* Fourth */
 #t-4:checked ~ .testimonials label[for="t-4"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-4:checked ~ .dots label[for="t-3"] {
 	transform: scale(1.5);
@@ -303,7 +304,6 @@ body{
 /* Fifth */
 #t-5:checked ~ .testimonials label[for="t-5"] img {
     opacity: 1;
-    height: 300px;
 }
 #t-5:checked ~ .dots label[for="t-4"] {
 	transform: scale(1.5);
@@ -346,9 +346,9 @@ body{
     border-radius: 25px;
     border: 1px solid transparent;
     padding: 0px 20px;
-    background: 
+    background:
     linear-gradient(to right,  #151531,  #151531 ),
-    linear-gradient(180deg, #FFFFFF,#C7C3D0); 
+    linear-gradient(180deg, #FFFFFF,#C7C3D0);
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
     padding: 5px 20px;
@@ -398,5 +398,13 @@ body{
     top: 80px;
     right: 0;
     /* z-index: -1; */
+}
+
+.activebutton{
+    color: #79D3FF;
+}
+
+.homebutton, .championbutton, .aboutbutton, .faqbutton, .timelinebutton{
+    color: white;
 }
 

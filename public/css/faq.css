@@ -97,7 +97,7 @@
     background: #240F4F;
     border-radius: 0px 0px 16px 16px;
     display: none;
-    
+
 }
 .text-content {
     color: rgba(255, 255, 255, 0.7);
@@ -107,4 +107,21 @@
 .arrow {
     width: 25px;
     outline: none;
+}
+
+.faq-circle1 {
+    position: absolute;
+    top: -30px;
+    right: 0px;
+}
+
+.faq-circle2 {
+    position: absolute;
+    top: 50%;
+}
+
+.faq-circle3 {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
 }

@@ -35,19 +35,19 @@
 }
 
 .container-championprizes .first .box{
-    background-image: url("/Resources/championprizes-img1.png");
+    background-image: url("/res/championprizes-img1.png");
     background-size: 80%;
     background-position: center;
 }
 
 .container-championprizes .second .box{
-    background-image: url("/Resources/championprizes-img2.png");
+    background-image: url("/res/championprizes-img2.png");
     background-size: 80%;
     background-position: center;
 }
 
 .container-championprizes .third .box{
-    background-image: url("/Resources/championprizes-img3.png");
+    background-image: url("/res/championprizes-img3.png");
     background-size: 80%;
     background-position: center;
 }
@@ -63,6 +63,7 @@
     background: -webkit-linear-gradient(#FFBF00, #FFDC73
     );
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -70,6 +71,7 @@
     background: -webkit-linear-gradient(#787878, #D9D9DA
     );
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -78,6 +80,7 @@
 
     );
     -webkit-background-clip: text;
+            background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
