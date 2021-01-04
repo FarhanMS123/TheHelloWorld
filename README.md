@@ -16,10 +16,20 @@ DB_DATABASE=hackathon
 DB_USERNAME=root
 DB_PASSWORD=
 
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME= {{"Your Email"}}
+MAIL_PASSWORD= {{"Your given security password"}}
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=null
+MAIL_FROM_NAME="${APP_NAME}"
 ...
 ```
-
 , or `CREATE` a database base in your prefere.
+Note: You could use other emails, instead of gmail
+      If you do that, just change "MAIL_HOST" to "smtp.{"your email preference"}".  
+      DO NOT use real password for MAIL_PASSWORD
 
 4. Open `database/seeds/AdminSeeder.php`, then edit as your preference.
 ```php
@@ -61,3 +71,4 @@ return [
 ## References
 
 1. https://medium.com/@nasrulhazim/laravel-using-different-table-and-guard-for-login-bc426d067901
+2. https://medium.com/@agavitalis/how-to-send-an-email-in-laravel-using-gmail-smtp-server-53d962f01a0c
