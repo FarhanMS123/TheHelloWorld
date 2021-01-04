@@ -27,6 +27,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 ...
 ```
 , or `CREATE` a database base in your prefere.
+
 Note: You could use other emails, instead of gmail
       If you do that, just change "MAIL_HOST" to "smtp.{"your email preference"}".  
       DO NOT use real password for MAIL_PASSWORD
