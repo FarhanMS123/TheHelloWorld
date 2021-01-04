@@ -80,17 +80,17 @@
                             <div class="view-file-container">
                                 <!-- This Id Card Leader -->
                                 <span class="button-border">ID Card
-                                    <a href="#leader-idcard-img" id="leader-button-viewid" rel="modal:open" class="button-viewfile" value="{{($member->id)}}">View</a>
+                                    <a href="#leader-idcard-img-{{$member->id}}" id="leader-button-viewid" rel="modal:open" class="button-viewfile">View</a>
                                 </span>
                                 <!-- This CV Leader -->
                                 <span class="button-border">CV
-                                    <a href="#leader-cv" id="leader-button-viewcv" rel="modal:open" class="button-viewfile" value="{{($member->id)}}">View</a>
+                                    <a href="#leader-cv-{{$member->id}}" id="leader-button-viewcv" rel="modal:open" class="button-viewfile">View</a>
                                 </span>
-                                <div id="leader-idcard-img" class="modal-background">
+                                <div id="leader-idcard-img-{{$member->id}}" class="modal-background">
                                     <embed src="{{asset($member->identity)}}" alt="Leader Image" class="image-modal">
                                     <a href="#" rel="modal:close"></a>
                                 </div>
-                                <div id="leader-cv" class="modal-background">
+                                <div id="leader-cv-{{$member->id}}" class="modal-background">
                                     <embed src="{{asset($member->cv)}}" alt="Leader Image" class="pdf-modal">
                                     <a href="#" rel="modal:close"></a>
                                 </div>
