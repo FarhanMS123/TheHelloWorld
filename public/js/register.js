@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 
         $("form").validate({
- 
+
         rules: {
             name: {
                 required: true,
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
         messages: {
             name:{
-                required: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.", 
+                required: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
                 minlength: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
                 letters: "*Please specify your group name. Only letters and spaces are allowed and minimum 3 characters.",
                 remote: "*This group name is already taken."
@@ -93,8 +93,8 @@ $(document).ready(function(){
                 remote: "*This email is already taken."
             } ,
             whatsapp: {
-                required: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ", 
-                minlength: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ", 
+                required: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
+                minlength: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
                 telephone: "*Please specify your Whatsapp number. Only numbers and starts with '+62', '08', or '8'. ",
                 remote: "*This Whatsapp number is already taken."
             } ,
@@ -113,14 +113,14 @@ $(document).ready(function(){
         errorElement : 'div',
 
         //location for error message radio button
-        errorPlacement: function(error, element) 
+        errorPlacement: function(error, element)
         {
-            if ( element.is(":radio") ) 
+            if ( element.is(":radio") )
             {
                 error.appendTo( element.parents('.radio-parent') );
             }
-            else 
-            {  
+            else
+            {
                 error.insertAfter( element );
             }
          },
@@ -131,12 +131,13 @@ $(document).ready(function(){
         }
         });
     });
-     
+
     //to display uploaded file name
      $("#cv").change(function(){
-        $(this).preventDefault();
+        // $(this).preventDefault();
+        $(this).off('wheel.disableScroll');
         $('.cv div').text(this.value.replace(/C:\\fakepath\\/i, ''));
-        
+
      });
      $("#identity").change(function(){
         $(this).off('wheel.disableScroll');
