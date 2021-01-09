@@ -130,7 +130,7 @@
                             <div>CV</div>
                             <button class="view" type="button">View</button>
                             <!-- DEAR BACKEND: ini image bukti nya -->
-                            <div class="bukti"><img src="{{$member->cv}}" alt=""></div>
+                            <div class="bukti"><img src="{{asset($member->cv)}}" alt=""></div>
                         </label>
                         <input type="file" id="mcv" name="cv" disabled>
                     </div>
