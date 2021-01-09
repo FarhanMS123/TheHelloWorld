@@ -80,7 +80,7 @@ function getPriceConfig($team){
                 <div class="box">
                     <div class="groupName">{{$team->name}}</div>
                     <!-- DEAR BACKEND: src img nya itu source buat bukti trf yass -trid-->
-                    <div class="bukti"><img src="{{asset($team->payment)}}" alt=""></div>
+                    <div class="bukti"><img style="width:100%" src="{{asset($team->payment)}}" alt=""></div>
                     <div class="content">
                         <div class="left">
                             <div>Price</div>
