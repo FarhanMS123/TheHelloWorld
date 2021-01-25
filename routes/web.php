@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 // ### PUBLIC ROUTES ###
 Route::get('/', 'IndexController@index')->name('home');
-Route::get('/css/championPrizes.css', 'IndexController@css_championPrizes')->name('css_championPrizes');
+// Route::get('/css/championPrizes.css', 'IndexController@css_championPrizes')->name('css_championPrizes');
 Route::post('/send', 'IndexController@send')->name('send');
 
 // ### GUEST ###########

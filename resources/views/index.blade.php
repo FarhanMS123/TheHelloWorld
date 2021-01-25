@@ -16,7 +16,8 @@
     <!-- CSS links: -->
     <link rel="stylesheet" href="{{url('/css/home.css')}}">
     <link rel="stylesheet" href="{{url('/css/aboutus.css')}}">
-    <link rel="stylesheet" href="{{url('/css/championPrizes.css')}}">
+    {{-- <link rel="stylesheet" href="{{url('/css/championPrizes.css')}}"> --}}
+    <link rel="stylesheet" href="{{mix('css/championPrizes.css')}}">
     <link rel="stylesheet" href="{{url('/css/whyjoin.css')}}">
     <link rel="stylesheet" href="{{url('/css/contactus.css')}}">
     <link rel="stylesheet" href="{{url('/css/sponsor.css')}}">

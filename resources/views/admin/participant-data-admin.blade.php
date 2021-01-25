@@ -61,10 +61,10 @@ function checkVerified($team){
                     <div class="buttons">
                         <a href="{{route("view_team", $team->id)}}"><button id="viewData">View Data</button></a>
                         <a href="{{route("view_edit_team", $team->id)}}"><button id="editData">Edit Data</button></a>
-                        <form action="{{route("delete_team", $team->id)}}">
+                        <form action="{{route("delete_team", $team->id)}}" method="POST">
                             @csrf
                             @method("delete")
-                            <button class="delete" id="deleteData">X</button>
+                            <button type='submit' class="delete" id="deleteData" name="del">X</button>
                         </form>
                     </div>
                 </div>
