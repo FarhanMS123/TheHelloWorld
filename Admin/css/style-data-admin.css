@@ -76,12 +76,16 @@
     width: 100%;
     overflow: hidden;
     margin-top: 20px;
+
 }
+
+
 
 .dataUpload label{
     background-color: transparent;
     display: flex;
     margin-top: 15px;
+    z-index: 2;
 }
 
 .dataUpload button{
@@ -103,4 +107,12 @@
 
 .id-card, .cv{
     margin-bottom: -1em;
+}
+
+.bukti img{
+    z-index:100000;
+}
+
+.overlay{
+    z-index: 1;
 }
