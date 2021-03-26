@@ -173,7 +173,9 @@ $(document).ready(function(){
           } ,
           git_account: "*Please specify your Github/Gitlab ID. ",
           place_of_birth: "*Please specify your place of birth. Only letters and spaces are allowed.",
-          date_of_birth: "*Please specify your date of birth. In format DD/MM/YYYY"
+          date_of_birth: "*Please specify your date of birth. In format DD/MM/YYYY",
+          cv: "*please upload your CV. In format pdf,jpg,jpeg, or png.",
+          bukti: "*please upload your CV. In format pdf,jpg,jpeg, or png."
       },
 
       //for error css div.error

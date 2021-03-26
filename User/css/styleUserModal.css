@@ -37,3 +37,9 @@
   background: #313166;
   border-radius: 0px 0px 32px 32px;
 }
+
+#submit-bukti {
+  max-width: 140px;
+  position: relative;
+  right: 100px;
+}

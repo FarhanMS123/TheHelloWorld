@@ -151,7 +151,7 @@
               </div>
           </div>
           <!-- Upload Payment -->
-          <form action="">
+          <form action="" name="uploadbuktipembayaran">
           <div class="upload-payment-container">
               <h3 class="upload-payment-subtitle">Upload Payment Receipt</h3>
               <div class="upload-payment-content">
@@ -174,12 +174,14 @@
                           </div>
                           <div class="upload-button-container">
                               <!-- Upload File -->
-                              <label for="bukti" id="bukti-label" class="cv">
-                                  <div class="bukti-upload" >Upload File</div>
-                              </label>
-                              <input type="file" id="bukti" name="bukti" required>
+                              <span>
+                                <label for="bukti" id="bukti-label" class="cv">
+                                    <div class="bukti-upload" >Upload File</div>
+                                </label>
+                                <input type="file" id="bukti" name="bukti">
+                              </span>
                               <!-- Submit -->
-                              <input id="submit-bukti" type="submit" value="Submit" onclick="myFunction()">
+                              <span><button id="submit-bukti" type="submit">Submit</button></span>
                           </div>
                       </div>
                       <!-- After Submit -->
@@ -204,7 +206,6 @@
       </div>
   </div>
     <!-- JS -->
-    <script src="/User/js/scriptUser.js"></script>
     <script src="/User/js/scriptUserPayment.js"></script>
     <!-- Modal CSS -->
     <link rel="stylesheet" href="/User/css/styleUserModal.css">

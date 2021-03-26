@@ -207,7 +207,8 @@ html {
 .upload-button-container {
     display: flex;
     flex-direction: row;
-    
+    justify-content: flex-start;
+    width: 250px;
 }
 .bukti-upload {
     color: white;
@@ -221,6 +222,7 @@ html {
     height: 25px;
     margin: 10px;
     padding-top: 2px;
+    order: 1;
 }
 
 #submit-bukti, #view-bukti {
@@ -236,12 +238,9 @@ html {
     margin: 10px;
     outline: none;
     text-align: center;
-    position: relative;
+    order: 2;
 }
 
-#submit-bukti {
-    right: 250px;
-}
 .submit-text {
     padding-top: 2px;
 }
@@ -261,4 +260,13 @@ html {
 }
 .invisible, #after-submit {
     display: none;
+}
+
+div.error{
+    color: rgb(233, 49, 49);
+    font-size: 12px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    order: 3;
 }
