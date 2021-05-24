@@ -1,0 +1,1 @@
+Mohon dibuka di VSCode pake Live Server kalo memungkinkan
